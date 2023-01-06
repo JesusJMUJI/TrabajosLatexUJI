@@ -21,8 +21,11 @@
 \RequirePackage{authblk}
 \RequirePackage{textcomp}
 \RequirePackage[absolute]{textpos}
-\RequirePackage[right]{lineno}
+%\RequirePackage[right]{lineno}
 \RequirePackage{amsmath}
+\RequirePackage{bookmark}
+\RequirePackage{float}
+\RequirePackage{sectsty}
 
 \def\@journalname{Practical Cousework}
 \def\@keywordsname{Keywords}
