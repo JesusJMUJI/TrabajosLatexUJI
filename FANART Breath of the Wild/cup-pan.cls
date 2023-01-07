@@ -156,7 +156,7 @@
 \titlespacing*{\section}{\z@}{\baselineskip}{\z@}
 \titlespacing*{\subsection}{\z@}{\baselineskip}{\z@}
 \titlespacing*{\subsubsection}{\z@}{\baselineskip}{\z@}
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 
 \setlist{leftmargin=*,nosep}
 
