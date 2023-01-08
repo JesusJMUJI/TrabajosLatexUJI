@@ -1,6 +1,4 @@
 
-\begin{comment}
-    
     \newpage
     \section{Example of a first section}
     \label{sec:overview}
@@ -96,5 +94,3 @@
     
     
     \printbibliography
-    
-\end{comment}
