@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{bookmark}
+\usepackage{comment}
 
 % Tipografía
 \usepackage[sfdefault]{inter}
@@ -46,7 +47,7 @@
     linkcolor=cyan,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={_deadSet},
+    pdftitle={deadSet},
     pdfpagemode=FullScreen,
 }
  \geometry{
@@ -151,34 +152,37 @@
 
     Este juego nació como una idea basada en otro juego, aunque lamentablemente requería demasiado tiempo y conocimiento de los cuales no se disponía, por lo que se simplificaron muchas ideas, llevando a \textunderscore deadSet. 
 
-    Se quería desarrollar un juego que fuese como la frase en inglés indica: \textit{"easy to learn, hard to master"} \footnote{\textit{Fácil de aprender, díficil de dominar}}; pero que fuese lo más rejugable posible. Por lo tanto, se eligió el género de juegos roguelike para esta labor. 
+    Se quería desarrollar un juego que fuese como la frase en inglés indica: \textit{“easy to learn, hard to master"} \footnote{\textit{Fácil de aprender, difícil de dominar}}; pero que fuese lo más rejugable posible. Por lo tanto, se eligió el género de juegos roguelike para esta labor. 
 
 %___________________________________________________________
 %___________________________________________________________
 %___________________________________________________________
 %___________________________________________________________
 
-\section{ Herramientas usadas en el proyecto}
 
-    Se utilizaron numerosas herramientas para la realización de este juego, las cuales se agruparan por el uso dado:
-
-    \subsection{Programación}
-        \begin{itemize}
-            \item Unity 2020.3.42/43 LTS: Motor de juegos.
-            \item Rider 2022.3: IDE con una integración muy elevada con Unity. 
-            \item Github (desktop): Gestor .git para gestionar copias del código.
-        \end{itemize}
-        
-    \subsection{Arte}
-        \begin{itemize}
-            \item Aseprite: Editor de imágenes especializado para pixel-art. 
-        \end{itemize}
-
-    \subsection{Redacción de documentos}
-        \begin{itemize}
-            \item Overleaf: Procesador de documentos basado en el lenguaje LaTeX. 
-        \end{itemize}
-
+\begin{comment}
+    \section{Herramientas usadas en el proyecto}
+    
+        Se utilizaron numerosas herramientas para la realización de este juego, las cuales se agruparan por el uso dado:
+    
+        \subsection{Programación}
+            \begin{itemize}
+                \item Unity 2020.3.42/43 LTS: Motor de juegos.
+                \item Rider 2022.3: IDE con una integración muy elevada con Unity. 
+                \item Github (desktop): Gestor .git para gestionar copias del código.
+            \end{itemize}
+            
+        \subsection{Arte}
+            \begin{itemize}
+                \item Aseprite: Editor de imágenes especializado para pixel-art. 
+            \end{itemize}
+    
+        \subsection{Redacción de documentos}
+            \begin{itemize}
+                \item Overleaf: Procesador de documentos basado en el lenguaje LaTeX. 
+            \end{itemize}
+    
+\end{comment}
 
 %____________________________________________________________________________________
 %____________________________________________________________________________________
@@ -194,7 +198,7 @@
     \end{itemize}
         
         \subsection{Taxonomía de Bartle}
-            Otro aspecto crucial del juego es su \textit{target} es muy definido. Para lograr esto, se usó la \textit{Taxonomía de jugadores de Bartle}, la cual se define como: 
+            Otro aspecto crucial del juego es su \textit{target} muy definido. Para lograr esto, se usó la \textit{Taxonomía de jugadores de Bartle} \cite{bartle}, la cual se define como: 
                 \begin{itemize}
                     \item \textit{\textbf{Achievers}}: Los cuales prefieren, por ejemplo,  ganar la máxima puntuación en un juego o conseguir todos los logros en un juego. 
                     \item \textit{\textbf{Killers}}: que son los jugadores que prefieren interactuar con otros jugadores y superarlos en algún reto.
@@ -204,10 +208,10 @@
     
             \vspace{5mm}
     
-            Una vez definida la \textit{Taxonomía de Bartle} podemos definir los jugadores que más llamará la atención para jugar \textunderscore deadSet serían: 
+            Una vez definida la \textit{Taxonomía de Bartle} \cite{bartle} podemos definir los jugadores que más llamará la atención para jugar \textunderscore deadSet serían: 
                 \begin{itemize}
                     \item \textit{\textbf{Killers}}: Debido a que el juego se basa principalmente en superar oleadas de enemigos los cuales hay que derrotar usando armas.
-                    \item \textit{\textbf{Achievers}}: Debido a la presencia de un temporizador dentro del juego que hará que este tipo de jugadores que quiera superar cada vez que juegen.
+                    \item \textit{\textbf{Achievers}}: Debido a la presencia de un temporizador dentro del juego que hará que este tipo de jugadores que quiera superar cada vez que jueguen.
                 \end{itemize}
 
 %____________________________________________________________________________________
@@ -216,20 +220,20 @@
 
 \section{Jugabilidad y Mecánicas}
     \subsection{Modo de juego}
-        El juego dispone de un único modo de juego, el cual es el modo de oleadas de enemigos, en el que el jugador se enfrenta a enemigos generados aleatoriamente por el mapa y una vez son derrotados, el juego genera más enemigos dependiendo del número de oleadas.
+        El juego dispone de un único modo de juego, el cual es el modo de oleadas de enemigos, en el que el jugador se enfrenta a enemigos generados aleatoriamente por el mapa y una vez son derrotados, el juego genera más enemigos dependiendo del número de oleadas.\\
 
     \subsection{Dinámicas}
-        La dinámica más presente del juego es la gestión de munición, ya que el jugador tiene que tener en mente el número de balas restantes; además de que todas las acciones del jugador requieren de un tiempo para realizarse, siendo una de las más duras recargar la escopeta porque se necesita munición de escopeta para recargar el rifle. 
+        La dinámica más presente del juego es la gestión de munición, ya que el jugador tiene que tener en mente el número de balas restantes; además de que todas las acciones del jugador requieren de un tiempo para realizarse, siendo una de las más duras recargar la escopeta porque se necesita munición de escopeta para recargar el rifle. \\
     
     \subsection{Mecánicas de combate}
-        \textunderscore deadSet es un roguelike en el que si el jugador muere, la partida se acaba y el juego se reiniciará desde la oleada 1. El jugador, para defenserse de los zombies, se le proporciona dos armas:
+        \textunderscore deadSet es un roguelike en el que si el jugador muere, la partida se acaba y el juego se reiniciará desde la oleada 1. El jugador para defenderse de los zombis, se le proporciona dos armas:
         
             \begin{itemize}
             
-                \item \textbf{Rifle de asalto}: Rifle con una alta cadencia de tiro y preciso pero un daño bajo. Versátil y es capaz de derrotar varios enemigos con un cargador, aunque, no se puede recargar de forma manual.\\ Como mecánica adicional, el jugador recarga el rifle disparando la escopeta; es decir, cuando el jugador dispara la escopeta, se restaura el cargador del rifle.
+                \item \textbf{Rifle de asalto}: Rifle con una alta cadencia de tiro y preciso pero un daño bajo. Versátil y es capaz de derrotar varios enemigos con un cargador, aunque, no se puede recargar de forma manual.\\ Como mecánica adicional, el jugador recarga el rifle disparando la escopeta; es decir, cuando el jugador dispara la escopeta, se restaura el cargador del rifle.\\
                 
                 \item \textbf{Escopeta}: Arma muy potente, capaz de derrotar un enemigo de un solo disparo; aunque lenta de usar. Es el arma primaria del jugador debido a que es muy potente, aunque al contrario del rifle, se necesita recargar la escopeta de forma manual usando un botón.\\ 
-                Por motivos de balanceo, el cargador de la escopeta es pequeño y se recarga como una escopeta de bombeo (es decir, cada vez que el jugador dispara tiene que esperar para disparar de nuevo), además de para recargarla se hace cartucho a cartucho (es decir, se introduce una bala en el cargador cada cierto tiempo).
+                Por motivos de balanceo, el cargador de la escopeta es pequeño y se recarga como una escopeta de bombeo (es decir, cada vez que el jugador dispara tiene que esperar para disparar de nuevo), además de para recargarla se hace cartucho a cartucho (es decir, se introduce una bala en el cargador cada cierto tiempo).\\
             \end{itemize}
 
         
@@ -241,11 +245,11 @@
         \caption{Método para mejorar las armas}
     \end{figure}
 
-    Otros aspectos destacables del combate es cuando se daña el personaje o los zombies. Comenzando por los zombies: 
+    Otros aspectos destacables del combate es cuando se daña el personaje o los zombis. Comenzando por los zombis: 
     
-    cuando una bala lo toca, cambia su color para señalizar que ha sido golpeado, y suavmente vuelve a su color original; esto se hizo para darle más importancia al golpe y resaltar al jugador que ha dañado al enemigo. 
+    cuando una bala lo toca, cambia su color para señalizar que ha sido golpeado, y suavemente vuelve a su color original; esto se hizo para darle más importancia al golpe y resaltar al jugador que ha dañado al enemigo. 
 
-    Esto también ocurre cuando los zombis dañan al jugador. El zombi que ha golkpeado al jugador se resalta (esta vez la duración siendo el \textit{cooldown} necesario para volver a hacer daño al jugador). 
+    Esto también ocurre cuando los zombis dañan al jugador. El zombi que ha golpeado al jugador se resalta (esta vez la duración siendo el \textit{cooldown} necesario para volver a hacer daño al jugador). 
     
     Esto también ocurre con el sprite del jugador para resaltar que ha sido dañado. El desvanecimiento del color es el mismo que el \textit{cooldown} de los zombis y puede ser activado tantas veces el jugador se choque contra un zombi.
 
@@ -255,9 +259,9 @@
         \begin{itemize}
             \item Derrotar oleada de enemigos → Pasar de oleada → Oleada Fuerte → Mejora de Armas → Repetir
         \end{itemize}
-        Este de hecho se podría definir como el bucle de juego principal, aunque hay otros bucles aún más cerrados, pero menos obvios al jugador debido a que se integran con este. 
+        Este de hecho se podría definir como el bucle de juego principal, aunque hay otros bucles aún más cerrados, pero menos obvios al jugador debido a que se integran con este.\\
         
-        Estos bucles serían, por ejemplo, el propio hecho de usar las armas. Aunque tampoco se puede considerar un bucle cerrado, ya que las armas se pueden usar en el orden que el jugador quiera. Podemos representarlo como un bucle de ejemplo: 
+        Estos bucles serían, por ejemplo, el propio hecho de usar las armas. Aunque tampoco se puede considerar un bucle cerrado, ya que las armas se pueden usar en el orden que el jugador quiera. Podemos representarlo como un bucle de ejemplo:\\
         \begin{itemize}
             \item Disparar rifle → Agotar munición → Disparar escopeta → Disparar rifle → Agotar ambas municiones → Recargar escopeta → Repetir
         \end{itemize}
@@ -277,9 +281,9 @@
             \label{fig:UI}
         \end{figure}
         
-        Se usaron elementos minimalistas para generar la interfaz del juego, con un aspecto de bloques y números con fuente lo más legible posible. Con las barras de munición (azul y rojo para el rifle y la escopeta, respectivamente) agotándose según las balas restantes en el cargador, además del número mencionado para los que jugadores que prefieran saber exactamente cuanta munición les queda.
+        Se usaron elementos minimalistas para generar la interfaz del juego, con un aspecto de bloques y números con fuente lo más legible posible. Con las barras de munición (azul y rojo para el rifle y la escopeta, respectivamente) agotándose según las balas restantes en el cargador, además del número mencionado para los que jugadores que prefieran saber exactamente cuanta munición les queda.\\
         
-        Se probó otra variante de los contadores, incluyéndolos al lado del arma. Aunque se descartó la idea debido a que los contadores eran demasiado pequeños y podían dar lugar a confusión al leerlos.
+        Se probó otra variante de los contadores, incluyéndolos al lado del arma. Aunque se descartó la idea debido a que los contadores eran demasiado pequeños y podían dar lugar a confusión al leerlos.\\
         
         \begin{figure}[H]
             \centering
@@ -290,7 +294,7 @@
         
     \subsection{Elementos gráficos}
         
-        Para simplificar el proceso de desarrollo del juego, se utilizaron assets comprados con licencia de uso personal/comercial, los cuales se pueden encontrar en el \href{https://github.com/JesusJMUJI/TopDownShooterGame}{GitHub del proyecto}.
+        Para simplificar el proceso de desarrollo del juego, se utilizaron assets comprados con licencia de uso personal/comercial, los cuales se pueden encontrar en el \href{https://github.com/JesusJMUJI/TopDownShooterGame}{GitHub del proyecto}.\\
         
         Un resumen del uso de los assets gráficos sería:
         \begin{itemize}
@@ -310,26 +314,27 @@
     
     \subsection{Apartado sonoro}
         
-        Para el sonido del juego, se tenía un objetivo en mente, el cual es: \textit{“punchy”}, traducido al castellano como “impactante”. Se buscaban sonidos que fuesen poco monótonos, ya que el juego se basa en disparar todo el tiempo, así que no se podían usar sonidos que fuesen genéricos o “aburridos”. 
+        Para el sonido del juego, se tenía un objetivo en mente, el cual es: \textit{“punchy”}, traducido al castellano como “impactante”. Se buscaban sonidos que fuesen poco monótonos, ya que el juego se basa en disparar todo el tiempo, así que no se podían usar sonidos que fuesen genéricos o “aburridos”.\\
 
-        Además, un problema que el jugador que presentarse es, quedarse sin munición. Se quería que el jugador siempre tuviese presente su número de balas restante y para indicar que su cargador se había agotado, se añadió un \textit{click} cuando intentas disparar y no te queda munición. 
+        Además, un problema que el jugador que presentarse es, quedarse sin munición. Se quería que el jugador siempre tuviese presente su número de balas restante y para indicar que su cargador se había agotado, se añadió un \textit{click} cuando intentas disparar y no te queda munición.\\
         
-        Se usaron los sonidos del paquete \textit{Snake's Authentic Gun Sounds(1 y 2)}.
+        Se usaron los sonidos del paquete \textit{Snake's Authentic Gun Sounds(1 y 2)}.\\
         
-        Aparte de los sonidos de \textit{Snake}, se usó para sonido de la esscopeta un sonido de una librería C00: Sonniss.com - GDC 2016 - Game Audio Bundle / TS Sound → 12 Gauge Shotgun.
+        Aparte de los sonidos de \textit{Snake}, se usó para sonido de la esscopeta un sonido de una librería C00: Sonniss.com - GDC 2016 - Game Audio Bundle / TS Sound → 12 Gauge Shotgun.\\
         
-        Para la música se necesitaba música que no hiciese monótona las partidas, ya que, un juego que esté diseñado para ser regulable necesita precisamente romper esta, un ejemplo para resolver esto es que cada vez una canción acaba, se escoge de forma aleatoria una canción de una lista de canciones. 
+        Para la música se necesitaba música que no hiciese monótona las partidas, ya que, un juego que esté diseñado para ser regulable necesita precisamente romper esta, un ejemplo para resolver esto es que cada vez una canción acaba, se escoge de forma aleatoria una canción de una lista de canciones.\\
         
-        Para estas canciones se usó la música de \textit{Action Music Pack 1 y 2}.
+        Para estas canciones se usó la música de \textit{Action Music Pack 1 y 2}.\\
         
     \subsection{Otros elementos}
     
-        Comentando otros assets usados en el juego, para el menú principal se usaron sprites del paquete: \textit{Controller \& Keyboard Icons}, ya que se quería representar los controles una manera más “táctil” o intuitiva.
+        Comentando otros assets usados en el juego, para el menú principal se usaron sprites del paquete: \textit{Controller \& Keyboard Icons}, ya que se quería representar los controles una manera más “táctil” o intuitiva.\\
         
-        En cuanto a la fuente se buscaba una fuente que fuese más desenfadada y fuese fácil de leer un “momento de pánico”. Por lo que se escogió la fuente: Alfa-Slab One, la cual está disponible en \textit{Google Fonts} de forma gratuita y de uso libre.
+        En cuanto a la fuente se buscaba una fuente que fuese más desenfadada y fuese fácil de leer un “momento de pánico”. Por lo que se escogió la fuente: Alfa-Slab One, la cual está disponible en \textit{Google Fonts} de forma gratuita y de uso libre.\\
 
+\newpage
 \section{¿Cómo se ha creado el juego?}
-    En esta sección me gustaría explicar como he creado alguno de los puntos más importantes del juego, destacando scripts importantes. 
+    En esta sección me gustaría explicar como he creado alguno de los puntos más importantes del juego, destacando scripts importantes. \\
     \subsection{Menú principal}
         El juego, debido a su complejidad mecánica y numerosos controles, se quería implementar de alguna manera una forma para mirar de forma sencilla los controles y una guía de juego dentro de este mismo.\\
 
@@ -348,6 +353,7 @@
             \caption{Corutina para mover cámara al \textit{target}}
         \end{figure}
 
+    \newpage
     \subsection{Enemigos}
         Una parte importante de los enemigos es que tienes que derrotarlos, y el jugador debe dispararles para derrotarlos. Así que una parte importante de ellos que puedas saber si le has dado bien. \\
         Para esto, se hizo una función que hace que el enemigo cambie de color y de forma suave cambie de nuevo a su color original. \\
@@ -358,7 +364,7 @@
         \end{figure}
         Esta corutina acepta unos parámetros concretos, lo cual ayuda a la hora de programar estos cambios.\\
 
-        También se usa \textit{desvanecimiento} para cuando los enemigos aparacen en una nueva oleada para hacer un poco más amena la iuntroducción de nuevos enemigos en el mapa.
+        También se usa \textit{desvanecimiento} para cuando los enemigos aparecen en una nueva oleada para hacer un poco más amena la introducción de nuevos enemigos en el mapa.
         \begin{figure}[H]
             \centering
             \includegraphics[width=\textwidth]{Images/Menuprincipal/fadein.png}
@@ -393,7 +399,7 @@
             Después se inicia otro método que se encarga de actualizar el sprite de la barra de munición.\\ 
             La cual actualiza / refresca el sprite cada vez que el contador de munición sea múltiplo de 5: \texttt{int index = (currentRifleAmmo / 5) - 1;}. \\
 
-            Ambos pasos ocurren en ambos scripts, aunque la escopeta tiene variaciones que explican en la sección \ref{escopeta}.
+            Ambos pasos ocurren en ambos scripts, aunque la escopeta tiene variaciones que explican en la sección~\ref{escopeta}.
 
             \begin{figure}[H]
                 \centering
@@ -415,14 +421,14 @@
             \begin{enumerate}
                 \item Se reinicia el \textit{cooldown} para poder disparar y se reinicia este mismo.
                 \item Se recorre la lista, asignando el valor \texttt{Random.rotation} a los \textit{Quaterniones} de la lista.
-                \item Se instancia la bala igual que en el rifle (sección: \ref*{rifle})
-                \item Para aplicar el llamado \textit{spread} \footnote{traducido como propagación} para crear aleatoriamente la dirección de los proyectiles. 
+                \item Se instancia la bala igual que en el rifle (sección:~\ref*{rifle})
+                \item Para aplicar el llamado \textit{spread}\footnote{traducido como propagación}para crear aleatoriamente la dirección de los proyectiles. 
                 \item Y por último, se le aplica la fuerza a la bala.
             \end{enumerate}
             También se ejecutan las instrucciones de refrescar la barra de munición, pero cada vez que disparas la escopeta debido al bajo cargador de munición del que dispone. \\
             
         \subsubsection{Función de recarga de la escopeta}  
-            Método muy sencillo en el que añade una bala al cargardor de la escopeta, según el valor de la variable \texttt{currentShotgunAmmo} no sea inferior o superior a valor máximo de \texttt{currentShotgunAmmo}.\\
+            Método muy sencillo en el que añade una bala al cargador de la escopeta, según el valor de la variable \texttt{currentShotgunAmmo} no sea inferior o superior a valor máximo de \texttt{currentShotgunAmmo}.\\
             También se comprueba si se puede recargar con la variable \texttt{canAnimate}, que se usa para que no puedan solaparse las animaciones de la escopeta. 
             \begin{figure}[H]
                 \centering
@@ -458,7 +464,7 @@
 
     \newpage
     \subsection{Licencia de plantilla}
-        \textit{Nota del autor: Enlace a plantilla en bibliografía: \ref{bibliografia}, cumpliendo con la licencia CC BY 4.0 de Creative Commons}\\
+        \textit{Nota del autor: Enlace a plantilla en bibliografía:~\ref{bibliografia}, cumpliendo con la licencia CC BY 4.0 de Creative Commons}\\
         \textit{Se han hecho los siguientes cambios:}
         \begin{figure}[H]
             \begin{itemize}
