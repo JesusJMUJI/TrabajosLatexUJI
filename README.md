@@ -1,5 +1,3 @@
-# TrabajosLatexUJI
- 
 ### LaTeX tutorial to have it on VSCode
 
 https://mathjiajia.github.io/vscode-and-latex/
