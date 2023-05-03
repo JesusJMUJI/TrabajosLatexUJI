@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+
+%\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{csquotes}
+\usepackage{enumitem, amsmath, amssymb, amsfonts, latexsym, mathrsfs}
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage[greek,english]{babel}
+%\usepackage{alphabeta}
+\usepackage{multicol}
+\usepackage{bookmark}
+
+\usepackage{caption}
+\captionsetup[figure]{font={small,it},labelfont={bf},justification={raggedright},singlelinecheck={false},name={Figura.}}
+
+
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+% Tipografía
+\usepackage[sfdefault]{Chivo}
+\usepackage[scaled=0.8]{cascadia-code}
+\usepackage[T1]{fontenc}
+\pretolerance=10000 
+
+\usepackage{comment}
+
+% Imagenes
+\graphicspath{ {./Images/} }
+
+% Interlineado
+\usepackage{setspace}
+\spacing{1.15}
+
+% Setup de hiperenlaces
+%\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Jiménez Montero Jesús Crying Girl in the Border}
+	citecolor=cyan
+}
+
+% Número de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{}
+\lhead[]{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot[]{}
+\lfoot[LF-even] {\hrulefill \newline \raggedright{\hyperref[fig:foto]{\textit{Volver a fotografía}}} --- \raggedleft{\Large{\textbf{\thepage}}}}
+\cfoot[]{}
+
+
+
+%______________________________________________________________________________
+%______________________________________________________________________________
+%______________________________________________________________________________
+%______________________________________________________________________________
+\begin{document}
+
+% PORTADA
+\begin{titlepage}
+
+	\centering
+	\hrule
+	\vspace{1cm}
+	{\bfseries\Huge Ensayo --- Análisis de fotografía \par}
+	\vspace{0.5cm}
+	\large{\textbf{Jesús Jiménez Montero} \par}
+
+	\vspace{1cm}
+
+	\vspace{0.5cm}
+
+	\vspace{1cm}
+	\hrulefill
+\end{titlepage}
+\newpage
+
+\renewcommand{\listfigurename}{\textbf{Lista de figuras}}
+
+
+\listoffigures
+\newpage
+
+
+\end{document}
