@@ -2274,7 +2274,7 @@ Con 2 RAM4, se puede componer una RAM8.
 		Todas estas RAMs se comportan de una manera parecida, pero aumentando su capacidad. Todas se construyen a partir de la RAM de ocho registros \ref{ram8} y después cada una con sus anteriores, es decir, RAM64 * 8 = RAM512.
 
     \subsection{Esquema del circuito de la RAM64, RAM512, RAM4k y RAM16k}
-		\footnotesize{\textit{NOTA: Debido a que el programa que uso para hacer los circuitos: CircuitVerse, no puede manejar la RAM64 debido a su complejidad, opto por usar un módulo prefabricado que incluye la página, los cuales se distinguen con un punto verde en la esquina.} }
+		\footnotesize{\textit{NOTA: Debido a que el programa que uso para hacer los circuitos: CircuitVerse, no puede manejar la RAM64 debido a su complejidad, opto por usar un módulo prefabricado que incluye la propia página, los cuales se distinguen con un punto verde en la esquina.} }
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.75\linewidth]{RAM/RAM64_int}
@@ -2306,6 +2306,13 @@ Con 2 RAM4, se puede componer una RAM8.
     \subsection{Implementación HDL - RAM64}
 
         \subsubsection{Archivo .HDL}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth]{RAM/ram64_hdl}
+	\caption{Implementación HDL de RAM64}
+	\label{fig:ram64hdl}
+\end{figure}
         \begin{lstlisting}
 
 CHIP RAM64 {
@@ -2330,18 +2337,17 @@ CHIP RAM64 {
 }
 
         \end{lstlisting}
-        \subsubsection{Archivo .TST}
-        \begin{lstlisting}
 
-        \end{lstlisting}
-        \subsubsection{Archivo .CMP}
-        \begin{lstlisting}
-
-        \end{lstlisting}
-
-   \subsection{Implementación HDL - RAM512}
-
+\subsection{Implementación HDL - RAM512}
   	\subsubsection{Archivo .HDL}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth]{RAM/RAM512_hdl}
+	\caption{Implementación HDL de RAM512}
+	\label{fig:ram512hdl}
+\end{figure}
+
   	\begin{lstlisting}
 
 CHIP RAM512 {
@@ -2365,18 +2371,16 @@ CHIP RAM512 {
 }
 
   	\end{lstlisting}
-  	\subsubsection{Archivo .TST}
-  	\begin{lstlisting}
-
-  	\end{lstlisting}
-  	\subsubsection{Archivo .CMP}
-  	\begin{lstlisting}
-
-  	\end{lstlisting}
 
 	\subsection{Implementación HDL - RAM4k}
 
   	\subsubsection{Archivo .HDL}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{RAM/RAM4k_hdl}
+		\caption{Implementación HDL de RAM4k}
+		\label{fig:ram4khdl}
+	\end{figure}
   	\begin{lstlisting}
 
 CHIP RAM4K {
@@ -2399,17 +2403,17 @@ CHIP RAM4K {
 }
 
   	\end{lstlisting}
-  	\subsubsection{Archivo .TST}
-  	\begin{lstlisting}
 
-  	\end{lstlisting}
-  	\subsubsection{Archivo .CMP}
-  	\begin{lstlisting}
-
-  	\end{lstlisting}
   	    \subsection{Implementación HDL - RAM16k}
 
   	\subsubsection{Archivo .HDL}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth]{RAM/RAM16k_hdl}
+	\caption{Implementación HDL de RAM16k}
+	\label{fig:ram16khdl}
+\end{figure}
   	\begin{lstlisting}
 
 CHIP RAM16K {
@@ -2426,14 +2430,6 @@ CHIP RAM16K {
 
 	Mux4Way16(a=oa,b=ob,c=oc,d=od,sel=address[12..13],out=out);
 }
-
-  	\end{lstlisting}
-  	\subsubsection{Archivo .TST}
-  	\begin{lstlisting}
-
-  	\end{lstlisting}
-  	\subsubsection{Archivo .CMP}
-  	\begin{lstlisting}
 
   	\end{lstlisting}
 
