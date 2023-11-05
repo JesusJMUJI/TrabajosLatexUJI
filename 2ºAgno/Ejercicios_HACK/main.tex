@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+%"mystyle" code listing set
+\lstset{style=mystyle}
+%\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+\usepackage[breaklinks]{hyperref}
+% Setup de hiperenlaces
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	pdftitle={Apuntes de Consolas y Videojuegos},
+	pdfpagemode=FullScreen,
+	citecolor = green
+}
+
+\usepackage{url}
+
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			{\Large Ejercicios Ensamblador Hack}
+
+			\vspace{3cm}
+
+			{\large Jesús Jiménez Montero}
+
+			\vspace{2cm}
+
+			Versión 1: Entregable 7
+		\end{center}
+	\end{titlepage}
+
+	% ÍNDICE
+	%\renewcommand{\tableofcontents}{Indice general}
+	\newpage
+	\renewcommand{\contentsname}{Tabla de contenidos}
+	\setcounter{secnumdepth}{5}
+	\tableofcontents
+	\setcounter{tocdepth}{4}
+	\newpage
+
+	\section{Entregable 7}
+		\subsection{Ejercicio 1}
+			\begin{lstlisting}
+
+				// Suma numeros 3+4+7
+				@3
+				D = A
+				@4
+				D = D + A
+				@7
+				D = D + A
+			\end{lstlisting}
+
+			% TODO: \usepackage{graphicx} required
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.75\linewidth]{Imagenes/ej1}
+				\label{fig:ej1}
+			\end{figure}
+
+		\newpage
+		\subsection{Ejercicio 2}
+			\begin{lstlisting}[]
+	// Suma de 3+4+7 en binario
+	0000000000000011 // Produce en A = 3, poner el numero sin 111 al princpio, produce un numero binario
+	1110110000010000 // Pone c1 y c2 activados = computar en A (0110000)... d2 activado (010), destino = D
+	0000000000000100 // Guarda en A = 4
+	1110000010010000 // Guarda en D (d2 activado (010)) la suma de D + A (c5 activado 000010)
+	0000000000000111 // Guarda en A = 7
+	1110000010010000 // Guarda en D (d2 activado (010)) la suma de D + A (c5 activado 000010)
+			\end{lstlisting}
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.75\linewidth]{Imagenes/ej2}
+				\label{fig:ej2}
+			\end{figure}
+		\newpage
+		\subsection{Ejercicio 3}
+			\begin{lstlisting}
+
+			\end{lstlisting}
+\end{document}
