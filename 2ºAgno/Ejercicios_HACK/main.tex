@@ -1,3 +1,4 @@
+% !TeX TS-program = xelatex
 \documentclass[12pt]{article}
 \usepackage{listings}
 \usepackage{float}
@@ -42,18 +43,48 @@
 
 \usepackage{url}
 
+\usepackage{fontspec}
+\setmainfont{AT-NameSansText}[
+	Path=./NameSansStatic/,
+	Extension = .otf,
+	UprightFont=*-Regular,
+	BoldFont=*-Bold,
+	ItalicFont=*-RegularItalic,
+	BoldItalicFont=*-BoldItalic,
+	Numbers = OldStyle
+]
+
+\setmonofont{ATNameMono}[
+	Path=./NameMonoStatic/,
+	Extension = .otf,
+	UprightFont=*-Regular,
+	BoldFont=*-Bold,
+	ItalicFont=*-RegularItalic,
+	BoldItalicFont=*-BoldItalic
+]
+
+\usepackage{biblatex}
+\addbibresource{referencias.bib}
+\usepackage{notoccite}
+
+
 \begin{document}
+\nocite{namesans_about}
+\nocite{namesans}
+\nocite{namemono}
+
+
 	\begin{titlepage}
 		\begin{center}
-			{\Large Ejercicios Ensamblador Hack}
-
-			\vspace{3cm}
-
-			{\large Jesús Jiménez Montero}
+			{\Huge \textbf{Ejercicios Ensamblador Hack}} 
 
 			\vspace{2cm}
 
-			Versión 1: Entregable 7
+			{\Large \textit{Jesús Jiménez Montero}}
+
+			\vspace{2cm}
+
+			\textbf{Versión 1}: Entregable 7
 		\end{center}
 	\end{titlepage}
 
@@ -82,13 +113,13 @@
 			% TODO: \usepackage{graphicx} required
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.75\linewidth]{Imagenes/ej1}
+				\includegraphics[width=1\linewidth]{Imagenes/ej1}
 				\label{fig:ej1}
 			\end{figure}
 
 		\newpage
 		\subsection{Ejercicio 2}
-			\begin{lstlisting}[]
+			\begin{lstlisting}
 	// Suma de 3+4+7 en binario
 	0000000000000011 // Produce en A = 3, poner el numero sin 111 al princpio, produce un numero binario
 	1110110000010000 // Pone c1 y c2 activados = computar en A (0110000)... d2 activado (010), destino = D
@@ -100,12 +131,61 @@
 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.75\linewidth]{Imagenes/ej2}
+				\includegraphics[width=1\linewidth]{Imagenes/ej2}
 				\label{fig:ej2}
 			\end{figure}
 		\newpage
 		\subsection{Ejercicio 3}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=1\linewidth]{Imagenes/ej3}
+				\label{fig:ej3}
+			\end{figure}
+
+			\newpage
 			\begin{lstlisting}
 
+		// Operacion
+		// x = 10 ; y = 12 ; z = 7
+		// x = y - z + 2 * x
+
+		// Ponemos cada valor en una "slot" de memoria
+		@10
+		D = A
+		@0
+		M = D
+		@12
+		D = A
+		@1
+		M = D
+		@7
+		D = A
+		@2
+		M = D
+
+		// Se hace y - z y se pone su resultado en RAM[1]
+		@1
+		D = M
+		@2
+		D = D - M
+		@1
+		M = D
+
+		// Se hace 2 * x ; se pone el resultado en RAM[0]
+		@0
+		D = M
+		D = D + M
+		M = D
+
+		// Se calcula (y-z) * (2*x) ; usando los resultados de RAM[0] y RAM[1]
+		// Se pone el resultado en RAM[3]
+		@1
+		D = D + M
+		@3
+		M = D
 			\end{lstlisting}
+
+\newpage
+
+\printbibliography[title={Biliografía y agradecimientos}]
 \end{document}
