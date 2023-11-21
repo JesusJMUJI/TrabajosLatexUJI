@@ -76,15 +76,13 @@
 
 	\begin{titlepage}
 		\begin{center}
-			{\Huge \textbf{Ejercicios Ensamblador Hack}} 
+			{\Huge \textbf{Entregable de Teoría 9}}
 
 			\vspace{2cm}
 
 			{\Large \textit{Jesús Jiménez Montero}}
 
 			\vspace{2cm}
-
-			\textbf{Versión 1}: Entregable 7
 		\end{center}
 	\end{titlepage}
 
@@ -97,93 +95,27 @@
 	\setcounter{tocdepth}{4}
 	\newpage
 
-	\section{Entregable 7}
-		\subsection{Ejercicio 1}
-			\begin{lstlisting}
+	\section{Memory.hdl}
+	\begin{lstlisting}
+CHIP Memory {
+	IN in[16], load, address[15];
+	OUT out[16];
 
-				// Suma numeros 3+4+7
-				@3
-				D = A
-				@4
-				D = D + A
-				@7
-				D = D + A
-			\end{lstlisting}
+	PARTS:
 
-			% TODO: \usepackage{graphicx} required
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=1\linewidth]{Imagenes/ej1}
-				\label{fig:ej1}
-			\end{figure}
+	DMux4Way(in=load,sel=address[13..14],a=ram,b=rram,c=scrn,d=keybd);
 
-		\newpage
-		\subsection{Ejercicio 2}
-			\begin{lstlisting}
-	// Suma de 3+4+7 en binario
-	0000000000000011 // Produce en A = 3, poner el numero sin 111 al princpio, produce un numero binario
-	1110110000010000 // Pone c1 y c2 activados = computar en A (0110000)... d2 activado (010), destino = D
-	0000000000000100 // Guarda en A = 4
-	1110000010010000 // Guarda en D (d2 activado (010)) la suma de D + A (c5 activado 000010)
-	0000000000000111 // Guarda en A = 7
-	1110000010010000 // Guarda en D (d2 activado (010)) la suma de D + A (c5 activado 000010)
-			\end{lstlisting}
+	Or(a=ram,b=rram,out=rr);
+	RAM16K(in=in,load=rr,address=address[0..13],out=r);
 
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=1\linewidth]{Imagenes/ej2}
-				\label{fig:ej2}
-			\end{figure}
-		\newpage
-		\subsection{Ejercicio 3}
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=1\linewidth]{Imagenes/ej3}
-				\label{fig:ej3}
-			\end{figure}
+	Screen(in=in,load=scrn,address=address[0..12],out=sc);
 
-			\newpage
-			\begin{lstlisting}
+	Keyboard(out=k);
 
-		// Operacion
-		// x = 10 ; y = 12 ; z = 7
-		// x = y - z + 2 * x
+	Mux4Way16(a=r,b=r,c=sc,d=k,sel=address[13..14],out=out);
 
-		// Ponemos cada valor en una "slot" de memoria
-		@10
-		D = A
-		@0
-		M = D
-		@12
-		D = A
-		@1
-		M = D
-		@7
-		D = A
-		@2
-		M = D
-
-		// Se hace y - z y se pone su resultado en RAM[1]
-		@1
-		D = M
-		@2
-		D = D - M
-		@1
-		M = D
-
-		// Se hace 2 * x ; se pone el resultado en RAM[0]
-		@0
-		D = M
-		D = D + M
-		M = D
-
-		// Se calcula (y-z) * (2*x) ; usando los resultados de RAM[0] y RAM[1]
-		// Se pone el resultado en RAM[3]
-		@1
-		D = D + M
-		@3
-		M = D
-			\end{lstlisting}
+}
+	\end{lstlisting}
 
 \newpage
 
