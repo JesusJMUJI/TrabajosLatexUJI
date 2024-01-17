@@ -17,6 +17,7 @@
 \usepackage{listings}
 \usepackage{svg}
 \usepackage{csquotes}
+\usepackage{bookmark}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -59,19 +60,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \rfoot[]{\thepage}
 \cfoot[]{}
-
-\usepackage[breaklinks]{hyperref}
-% Setup de hiperenlaces
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=magenta,
-	urlcolor=cyan,
-	pdftitle={Apuntes de Consolas y Videojuegos},
-	pdfpagemode=FullScreen,
-	citecolor = green
-}
-
 \usepackage{url}
 
 \usepackage{fontspec}
@@ -105,6 +93,16 @@ BoldItalicFont=*-BoldItalic
 \usepackage{multicol}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+\usepackage{hyperref}
+% Setup de hiperenlaces
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	citecolor = green,
+}
 
 
 \begin{document}
@@ -155,7 +153,7 @@ BoldItalicFont=*-BoldItalic
 		\part{El álgebra de Boole}
 		\section{El álgebra de Boole}
 
-		\subsection{Definición del álgebra de Boole \texorpdfstring{\cite{floyd_fundamentos_2006} \cite{logic_gate} \cite{puerta_logica}}{}}
+		\subsection{Definición del álgebra de Boole \cite{floyd_fundamentos_2006} \cite{logic_gate} \cite{puerta_logica}}
 		El álgebra de Boole es basicamente las matématicas que se usan en computación, necesarias para analizar los circuitos lógicos.
 
 		Para realizar esta álgebra se usan varios términos: variable, que referencia a una magnitud que se resume en los valores 0 y 1 y los complementos, que son los inversos de una variable, representados con una barra ($A \rightarrow \overline{A}$).
@@ -2391,7 +2389,7 @@ BoldItalicFont=*-BoldItalic
 	La caché es una memoria especial situada entre la CPU y la memoria principal que almacena los datos e instrucciones que se usan con más frecuencia. El uso principal de la caché es reducir el tiempo medio que toma en acceder a los datos de la memoria principal. \cite{geeksforgeeks-2023} \\
 
 	\subsection{Caché de Correspondencia Directa}
-	La forma más sencilla de caché, se denomina correspondencia directa, la cual asigna una posición de la caché basándose en la dirección de memoria.\footnote{\textit{Cache de correspondencia directa: organización de cache en la que cada posición de la memoria principal se corresponde con una única posición de la cache.}}
+	La forma más sencilla de caché, se denomina correspondencia directa, la cual asigna una posición de la caché basándose en la dirección de memoria.\footnote{\textit{Cache de correspondencia directa: organización de caché en la que cada posición de la memoria principal se corresponde con una única posición de la caché.}}
 
 	Para poder alojar el contenido de varias posiciones diferentes de la memoria principal, se usan las etiquetas, las cuales llevan la información de la direccion necesaria para identificar si una palabra de la caché se corresponde con una palabra de la memoria principal.
 

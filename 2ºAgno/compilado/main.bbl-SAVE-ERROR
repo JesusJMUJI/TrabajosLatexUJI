@@ -1,0 +1,505 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{namesans_about}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0e0908601a56c52c505d2d011b16695f}{%
+           family={{ArrowType}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{fullhash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{bibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorbibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authornamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorfullhash}{0e0908601a56c52c505d2d011b16695f}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Creador original de las fuentes usadas en este documento, con permiso y licencia de estudiante ortorgados por ArrowType}
+      \field{title}{ArrowType}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.arrowtype.com/about
+      \endverb
+      \verb{url}
+      \verb https://www.arrowtype.com/about
+      \endverb
+    \endentry
+    \entry{namesans}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0e0908601a56c52c505d2d011b16695f}{%
+           family={{ArrowType}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{fullhash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{bibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorbibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authornamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorfullhash}{0e0908601a56c52c505d2d011b16695f}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fuente utlizada con licencia de estudiante otorgada por ArrowType}
+      \field{title}{Name Sans}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.futurefonts.xyz/arrowtype/name-sans
+      \endverb
+      \verb{url}
+      \verb https://www.futurefonts.xyz/arrowtype/name-sans
+      \endverb
+    \endentry
+    \entry{namemono}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0e0908601a56c52c505d2d011b16695f}{%
+           family={{ArrowType}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{fullhash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{bibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorbibnamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authornamehash}{0e0908601a56c52c505d2d011b16695f}
+      \strng{authorfullhash}{0e0908601a56c52c505d2d011b16695f}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Fuente utlizada con licencia de estudiante otorgada por ArrowType}
+      \field{title}{Name Sans Mono}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.arrowtype.com/about
+      \endverb
+      \verb{url}
+      \verb https://www.arrowtype.com/about
+      \endverb
+    \endentry
+    \entry{diagram}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Circuit Diagram is a free application for making electronic circuit diagrams and exporting them as images. Design circuits online in your browser or using the desktop application.}
+      \field{note}{Diagramas creados con Circuit Diagram}
+      \field{title}{Circuit Diagram - A Circuit Diagram Maker}
+      \verb{urlraw}
+      \verb https://www.circuit-diagram.org/
+      \endverb
+      \verb{url}
+      \verb https://www.circuit-diagram.org/
+      \endverb
+    \endentry
+    \entry{floyd_fundamentos_2006}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d707621bff00860337e7468e3c963e1e}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Thomas\bibnamedelima L.},
+           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {es}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{d707621bff00860337e7468e3c963e1e}
+      \strng{fullhash}{d707621bff00860337e7468e3c963e1e}
+      \strng{bibnamehash}{d707621bff00860337e7468e3c963e1e}
+      \strng{authorbibnamehash}{d707621bff00860337e7468e3c963e1e}
+      \strng{authornamehash}{d707621bff00860337e7468e3c963e1e}
+      \strng{authorfullhash}{d707621bff00860337e7468e3c963e1e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sistemas Digitales}
+      \field{isbn}{8483220857}
+      \field{note}{Información obtenida del capítulo 1,2,3,4,5 y 6}
+      \field{title}{Fundamentos de sistemas digitales}
+      \field{year}{2006}
+    \endentry
+    \entry{geeksforgeeks-2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={GeeksforGeeks},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{{Cache memory in computer organization}}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/cache-memory-in-computer-organization/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/cache-memory-in-computer-organization/
+      \endverb
+    \endentry
+    \entry{video_karnaugh}{misc}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This video tutorial provides an introduction into karnaugh maps and combinational logic circuits. It explains how to take the data from a truth table and tr...}
+      \field{note}{Información obtenida para realizar mapas de Karnaugh}
+      \field{title}{Introduction to karnaugh maps - combinational logic circuits, functions, \& truth tables}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=RO5alU6PpSU
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=RO5alU6PpSU
+      \endverb
+    \endentry
+    \entry{kumar-2023}{online}{}
+      \name{author}{2}{}{%
+        {{hash=54827bad066d18ba2f63af061ea029cc}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Dhiraj},
+           giveni={D\bibinitperiod}}}%
+        {{hash=54827bad066d18ba2f63af061ea029cc}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Dhiraj},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \strng{fullhash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \strng{bibnamehash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \strng{authorbibnamehash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \strng{authornamehash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \strng{authorfullhash}{92cc36bc9c492486e5b6264d4e714b8f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{7}
+      \field{title}{What is a direct mapped cache? | Baeldung on Computer Science}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.baeldung.com/cs/cache-direct-mapping
+      \endverb
+      \verb{url}
+      \verb https://www.baeldung.com/cs/cache-direct-mapping
+      \endverb
+    \endentry
+    \entry{logic_gate}{misc}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A logic gate is an idealized or physical device that performs a Boolean function, a logical operation performed on one or more binary inputs that produces a single binary output. Depending on the context, the term may refer to an ideal logic gate, one that has, for instance, zero rise time and unlimited fan-out, or it may refer to a non-ideal physical device (see ideal and real op-amps for comparison). In the real world, the primary way of building logic gates uses diodes or transistors acting as electronic switches. Today, most logic gates are made from MOSFETs (metal–oxide–semiconductor field-effect transistors). They can also be constructed using vacuum tubes, electromagnetic relays with relay logic, fluidic logic, pneumatic logic, optics, molecules, or even mechanical elements. With amplification, logic gates can be cascaded in the same way that Boolean functions can be composed, allowing the construction of a physical model of all of Boolean logic, and therefore, all of the algorithms and mathematics that can be described with Boolean logic. Logic circuits include such devices as multiplexers, registers, arithmetic logic units (ALUs), and computer memory, all the way up through complete microprocessors, which may contain more than 100 million logic gates. Compound logic gates AND-OR-Invert (AOI) and OR-AND-Invert (OAI) are often employed in circuit design because their construction using MOSFETs is simpler and more efficient than the sum of the individual gates.In reversible logic, Toffoli or Fredkin gates are used.}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{9}
+      \field{note}{Imágenes de las puertas lógicas obtenidas de este artículo}
+      \field{title}{Logic gate}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Logic_gate&oldid=1175662758
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Logic_gate&oldid=1175662758
+      \endverb
+    \endentry
+    \entry{nand2tetris}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=dd03ed102537d5040adaf7ede9bad0ec}{%
+           family={Nisan},
+           familyi={N\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=826c6510225a8fe3d36e12e39fd5ebc8}{%
+           family={Schocken},
+           familyi={S\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{fullhash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{bibnamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authorbibnamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authornamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authorfullhash}{d06db9c1579ba497d0cfea0492d2c054}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Simulador de Hardware obtenido desde el curso nand2tetris}
+      \field{title}{{Home | Nand2Tetris}}
+      \verb{urlraw}
+      \verb https://www.nand2tetris.org/
+      \endverb
+      \verb{url}
+      \verb https://www.nand2tetris.org/
+      \endverb
+    \endentry
+    \entry{nisan_nand2tetris_2005}{book}{}
+      \name{author}{2}{}{%
+        {{hash=dd03ed102537d5040adaf7ede9bad0ec}{%
+           family={Nisan},
+           familyi={N\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=826c6510225a8fe3d36e12e39fd5ebc8}{%
+           family={Schocken},
+           familyi={S\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{fullhash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{bibnamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authorbibnamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authornamehash}{d06db9c1579ba497d0cfea0492d2c054}
+      \strng{authorfullhash}{d06db9c1579ba497d0cfea0492d2c054}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{{The elements of computing systems: Building a modern computer from first principles}}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb http://ci.nii.ac.jp/ncid/BB10970208
+      \endverb
+      \verb{url}
+      \verb http://ci.nii.ac.jp/ncid/BB10970208
+      \endverb
+    \endentry
+    \entry{chatgpt}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0523b13262b12c215d8009938f5c14f1}{%
+           family={OpenAI},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{fullhash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{bibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorbibnamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authornamehash}{0523b13262b12c215d8009938f5c14f1}
+      \strng{authorfullhash}{0523b13262b12c215d8009938f5c14f1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Ayuda extra para realizar el código HDL, transformar tablas en texto monoespaciado y crear tablas de verdad}
+      \field{title}{{ChatGPT}}
+      \verb{urlraw}
+      \verb https://openai.com/chatgpt
+      \endverb
+      \verb{url}
+      \verb https://openai.com/chatgpt
+      \endverb
+    \endentry
+    \entry{patterson-2011}{book}{}
+      \name{author}{2}{}{%
+        {{hash=95486d328725c1c6a933929c9442fe2a}{%
+           family={Patterson},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelimb A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4a72d9e0de431dadafab463df2ea7b0f}{%
+           family={Hennessy},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelimb L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{80dcd96d4af78aec55cda074050a4718}
+      \strng{fullhash}{80dcd96d4af78aec55cda074050a4718}
+      \strng{bibnamehash}{80dcd96d4af78aec55cda074050a4718}
+      \strng{authorbibnamehash}{80dcd96d4af78aec55cda074050a4718}
+      \strng{authornamehash}{80dcd96d4af78aec55cda074050a4718}
+      \strng{authorfullhash}{80dcd96d4af78aec55cda074050a4718}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{1}
+      \field{subtitle}{La interfaz hardware/ software}
+      \field{title}{Estructura y diseño de computadores}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{puerta_logica}{misc}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Una puerta lógica o compuerta lógica, es un dispositivo electrónico con una función de tipo booleano u otros tipos (ej. «Trivalente»), como sumar o restar, incluir o excluir según sus propiedades lógicas. Se pueden aplicar a tecnología electrónica, eléctrica, mecánica, hidráulica y neumática. Componen los circuitos de conmutación integrados en un chip. Experimentada con relés o interruptores electromagnéticos para conseguir las condiciones de cada compuerta lógica, por ejemplo, para la función booleana Y (AND) colocaba interruptores en circuito serie, ya que con uno solo de estos que tuviera la condición «abierto», la salida de la compuerta Y sería = 0, mientras que para la implementación de una compuerta O (OR), la conexión de los interruptores tiene una configuración en circuito paralelo.[1]​ La tecnología microelectrónica actual permite la elevada integración de transistores actuando como conmutadores en redes lógicas dentro de un pequeño circuito integrado. El chip de la CPU es una de las máximas expresiones de este avance tecnológico. En nanotecnología se está desarrollando el uso de una compuerta lógica molecular, que haga posible la miniaturización de circuitos.}
+      \field{journaltitle}{Wikipedia, la enciclopedia libre}
+      \field{month}{6}
+      \field{note}{Información adicional obtenida de este artículo}
+      \field{title}{Puerta lógica}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/w/index.php?title=Puerta_l%C3%B3gica&oldid=152082328
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/w/index.php?title=Puerta_l%C3%B3gica&oldid=152082328
+      \endverb
+    \endentry
+    \entry{atkinson}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=42a6aaa665eb65cf0812d05edcfe8e61}{%
+           family={Staff},
+           familyi={S\bibinitperiod},
+           given={Braille\bibnamedelima Institute},
+           giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \strng{fullhash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \strng{bibnamehash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \strng{authorbibnamehash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \strng{authornamehash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \strng{authorfullhash}{42a6aaa665eb65cf0812d05edcfe8e61}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new typeface – greater legibility and readability for low vision readers Atkinson Hyperlegible font is named after Braille Institute founder, J. Robert Atkinson.  What makes it different from traditional typography design is that it focuses on letterform distinction to increase character recognition, ultimately improving readability.  We are making it free for anyone to use!}
+      \field{journaltitle}{Braille Institute}
+      \field{note}{Fuente usada en el documento debido a su excelente legibilidad y distinción entre la O y el 0}
+      \field{title}{Download the {Atkinson} {Hyperlegible} {Font}}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://brailleinstitute.org/freefont
+      \endverb
+      \verb{url}
+      \verb https://brailleinstitute.org/freefont
+      \endverb
+    \endentry
+    \entry{texstudio}{misc}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{abstract}{TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible.}
+      \field{note}{Editor LaTeX usado para escribir el documento}
+      \field{title}{TexStudio}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.texstudio.org/
+      \endverb
+      \verb{url}
+      \verb https://www.texstudio.org/
+      \endverb
+    \endentry
+    \entry{fully_asociative_cache}{video}{}
+      \name{author}{1}{}{%
+        {{hash=e5742918ccc601d1624882335fdbf22d}{%
+           family={{Udacity}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5742918ccc601d1624882335fdbf22d}
+      \strng{fullhash}{e5742918ccc601d1624882335fdbf22d}
+      \strng{bibnamehash}{e5742918ccc601d1624882335fdbf22d}
+      \strng{authorbibnamehash}{e5742918ccc601d1624882335fdbf22d}
+      \strng{authornamehash}{e5742918ccc601d1624882335fdbf22d}
+      \strng{authorfullhash}{e5742918ccc601d1624882335fdbf22d}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{2}
+      \field{title}{Fully associative mapping}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=bIcCOKwulzo
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=bIcCOKwulzo
+      \endverb
+    \endentry
+    \entry{duke}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a0789f8b39837fde95abfdaf974bedd1}{%
+           family={University},
+           familyi={U\bibinitperiod},
+           given={Duke},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0789f8b39837fde95abfdaf974bedd1}
+      \strng{fullhash}{a0789f8b39837fde95abfdaf974bedd1}
+      \strng{bibnamehash}{a0789f8b39837fde95abfdaf974bedd1}
+      \strng{authorbibnamehash}{a0789f8b39837fde95abfdaf974bedd1}
+      \strng{authornamehash}{a0789f8b39837fde95abfdaf974bedd1}
+      \strng{authorfullhash}{a0789f8b39837fde95abfdaf974bedd1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{note}{Cógido HDL}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://duke.edu/
+      \endverb
+      \verb{url}
+      \verb https://duke.edu/
+      \endverb
+    \endentry
+    \entry{circuitverse}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a90f9ef2bfad4334fedafb089f4017d6}{%
+           family={Zense},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \strng{fullhash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \strng{bibnamehash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \strng{authorbibnamehash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \strng{authornamehash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \strng{authorfullhash}{a90f9ef2bfad4334fedafb089f4017d6}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Todos los diagramas de circuitos han sido construidos con esta herramienta}
+      \field{title}{{CircuitVerse - Online Digital Logic Circuit Simulator}}
+      \verb{urlraw}
+      \verb https://circuitverse.org/
+      \endverb
+      \verb{url}
+      \verb https://circuitverse.org/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
