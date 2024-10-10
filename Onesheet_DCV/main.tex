@@ -14,6 +14,9 @@
 \usepackage{setspace} % Espaciado entre lineas
 \usepackage[dvipsnames]{xcolor}
 \usepackage{microtype}
+\usepackage{comment}
+\usepackage{xspace}
+
 
 % Configuración de márgenes
 \geometry{
@@ -101,7 +104,7 @@
 
 % Configuración de títulos de secciones
 \titleformat{\section}[hang]{\Large\bfseries}{\thesection}{2pc}{}
-\titlespacing*{\section}{0pt}{0pt}{20pt}
+\titlespacing*{\section}{0pt}{0pt}{8pt}
 
 % Configuración de párrafos
 \setlength{\parindent}{15pt} % Sangría
@@ -111,6 +114,13 @@
 \fancyhf{}
 \fancyhead[L]{\leftmark}
 \fancyfoot[C]{\thepage}
+
+\newcommand{\gameTitle}{\textbf{Thy Ways Dimness}}
+\newcommand{\hole}{Hole\xspace}
+\newcommand{\gunpowder}{Gunpowder\xspace}
+\newcommand{\humanity}{Humanity\xspace}
+\newcommand{\hunters}{Hunters\xspace}
+
 
 % Configuración del documento
 \begin{document}
@@ -123,8 +133,8 @@
     % Logo de la universidad
     \includegraphics[width=0.5\textwidth]{Imagenes/marca-uji-color.jpg}\par\vspace{1cm}
 
-    {\Huge \bfseries GAME CONCEPT PRACTICE \par}
-    {\large \bfseries Thy Ways are Dimnes \par}
+    {\Huge \bfseries ONE SHEET \par}
+    {\large \bfseries \gameTitle \par}
 
     % Información adicional
     \textsc{\large }
@@ -164,64 +174,8 @@
 % BEGINNING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Game title.}
-Thy Ways are Dimness \footnote{\href{https://dictionary.cambridge.org/es/diccionario/ingles/dimness}{Meaning of dimness}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Public objective.}
-The game is intentded for players that like wave-based games, with a focus on room clearing and fast-paced combat.
-
-Using \textbf{Bartle's Taxonomy}, the game focuses primarly on two types of players. \textbf{Killers}, who will enjoy the killing aspect of clearing full of enemies and \textbf{Achievers} because the game will include achivements and (to be considered) collectibles, which could include the \textbf{Explorers} type of player.
-
-Also, the \textbf{Socializers} would be left of the equation, however, the game could support some kind of coop multiplayer, or even \textit{versus} mode.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{A summary of the game's story, focusing on gameplay.}
-The game is set on a dark-medieval like world, where all human life has become extinct due to a event. This event was that the Earth crust collapsed, opening a big hole that opened the gates to dark creatures.
-
-The creatures made of pure darkenss were mostly indestructible, except for a big weakness: \textbf{Light} and \textbf{Fire}; Light would expose them, and revealing their \textit{“flesh”} and be able to be damaged, then by using weapons covered in fire, these would be able to die. Humanity's will to live made them forcibly discover Gunpowder, which combined both elements into Humanity's last reasource.
-
-Humanity was able to persevere by moving their cities near the hole; as for some reason, as closer Humanity was to the hole, the less the creatures would attack them. Thus, the villages near the Hole established and the legion of Hunters was created.
-
-As Gunpowder was limited, only the best warriors were assigned to the Gunpowder weapons; and to save Humanity only one thing can be done; go down to the Hole.
-
-The player is one of those Hunters, and you need to kill everything down there and save them all.
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Distinct modes of gameplay.}
-The game would have two modes of gameplay; \textbf{Story Mode} and \textbf{Endless Mode}.
-
-The first being a chapter based structure where the player would descend into the Hole further and further until defeating a boss or solving the Hole \textit{problem}.
-
-The second is a wave-based mode where the player would survive as long as possible; appart from being used a as a leaderboard and achievment hunter gamemode, it would be used to practice \textit{(learn new weapons, enemies weakness, etc.)}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Why this game is original?}
-The main selling point of the game is the extreme use of darkness and light. First, the game is \textit{VERY} dark, and enemies cannot be located by eyesight until they are close, following their faintly glowing eyes, or locating them by sound. One simple way to see them is by using \textbf{flares} which are auto reloaded but only have a few ready to use and fade out with time.
-
-However, enemies can also be revealed by shooting them. As Gunpowder is special in this world, the bullets will permanently reveal the enemy; also, if the player missed and bullets fly by the enemy, this will reveal them but only for a short time \textit{(similar fade out to flares)}.
-
-This is the main mechanic that separates this game from others.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{For what reasons this game is interesting?}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{What are its main differences with video games of the same genre and what are this games?}
+\input{./chapters/full.tex}
 
 
 \end{document}
+
