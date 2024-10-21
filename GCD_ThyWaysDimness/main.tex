@@ -53,6 +53,15 @@
     BoldItalicFont = {*BoldItalic},
 ]
 
+\newfontfamily\LexicaFamily{LexicaUltralegible}[
+    Path = ./fonts/,
+    Extension = .otf,
+    UprightFont = {*-Regular},
+    ItalicFont = {*-Italic},
+    BoldFont = {*-Bold},
+    BoldItalicFont = {*-BoldItalic},
+]
+
 \setmainfont{Aptos}
 [
     Path = ./fonts/,
@@ -131,6 +140,7 @@
 \newcommand{\humanity}{Humanity\xspace}
 \newcommand{\hunters}{Hunters\xspace}
 \newcommand{\Neue}[1]{{\NeueFam #1}}
+\newcommand{\Lexica}[1]{{\LexicaFamily #1}}
 
 
 % Configuración del documento
