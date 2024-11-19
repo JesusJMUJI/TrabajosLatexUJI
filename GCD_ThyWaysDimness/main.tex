@@ -16,6 +16,7 @@
 \usepackage{microtype}
 \usepackage{comment}
 \usepackage{xspace}
+\usepackage{titlesec}
 
 
 % Configuración de márgenes
@@ -139,9 +140,21 @@
 \newcommand{\gunpowder}{Gunpowder\xspace}
 \newcommand{\humanity}{Humanity\xspace}
 \newcommand{\hunters}{Hunters\xspace}
+\newcommand{\TWD}{ \textbf{TWD}\xspace}
 \newcommand{\Neue}[1]{{\NeueFam #1}}
 \newcommand{\Lexica}[1]{{\LexicaFamily #1}}
 
+% For subsections
+\titleformat{\subsection}[hang]
+{\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{2em}{*1}{*1}
+
+% For subsubsections
+\titleformat{\subsubsection}[hang]
+{\normalfont\normalsize\bfseries}
+{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{4em}{*1}{*1}
 
 % Configuración del documento
 \begin{document}
@@ -197,7 +210,8 @@
 
 \section*{One Sheet}
 \addcontentsline{toc}{section}{One Sheet}
-% \input{./chapters/onesheet.tex}
+\input{./chapters/onesheet.tex}
+\newpage
 \section*{Game Design Document}
 \addcontentsline{toc}{section}{Game Design Document}
 \input{./chapters/gcd.tex}
