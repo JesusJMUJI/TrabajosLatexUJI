@@ -4,7 +4,7 @@
 
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Para imágenes
-\usepackage[utf8]{inputenc} % Soporte UTF-8
+% \usepackage[utf8]{inputenc} % Soporte UTF-8
 \usepackage[spanish]{babel} % Idioma del documento
 \usepackage[colorlinks]{hyperref} % Para los enlaces
 \usepackage{fancyhdr} % Para encabezados y pies de página
@@ -16,8 +16,7 @@
 \usepackage{microtype}
 \usepackage{comment}
 \usepackage{xspace}
-\usepackage{titlesec}
-
+\usepackage{fontspec}
 
 % Configuración de márgenes
 \geometry{
@@ -44,70 +43,22 @@
     ,runbordercolor=Mulberry
 }
 
-\usepackage{fontspec}
-\newfontfamily\NeueFam{NeueHaasDisplay}[
+
+\newfontfamily\SpaceGrotesk{SpaceGrotesk}[
     Path = ./fonts/,
     Extension = .ttf,
-    UprightFont = {*Roman},
-    ItalicFont = {*RomanItalic},
-    BoldFont = {*Bold},
-    BoldItalicFont = {*BoldItalic},
+    UprightFont = {*-Regular},
+    BoldFont = {*-Bold},
 ]
 
-\newfontfamily\LexicaFamily{LexicaUltralegible}[
+
+\setmainfont{Inter}[
     Path = ./fonts/,
-    Extension = .otf,
+    Extension = .ttf,
     UprightFont = {*-Regular},
     ItalicFont = {*-Italic},
     BoldFont = {*-Bold},
     BoldItalicFont = {*-BoldItalic},
-]
-
-\setmainfont{Aptos}
-[
-    Path = ./fonts/,
-    Extension = .ttf,
-    UprightFont = {*-Regular},
-    ItalicFont = {*-Italic},
-    BoldFont = {*-Bold},
-    BoldItalicFont = {*-Bold-Italic},
-]
-
-% Define a range of font weights manually without wildcard
-\newfontface\Light{NeueHaasDisplayLight}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayLightItalic,  % Explicitly provide the full Italic font name
-    Extension = .ttf
-]
-
-\newfontface\Medium{NeueHaasDisplayMedium}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayMediumItalic,
-    Extension = .ttf
-]
-
-\newfontface\Thin{NeueHaasDisplayThin}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayThinItalic,
-    Extension = .ttf
-]
-
-\newfontface\XThin{NeueHaasDisplayXThin}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayXThinItalic,
-    Extension = .ttf
-]
-
-\newfontface\XXThin{NeueHaasDisplayXXThin}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayXXThinItalic,
-    Extension = .ttf
-]
-
-\newfontface\Black{NeueHaasDisplayBlack}[
-    Path = ./fonts/,
-    ItalicFont = NeueHaasDisplayBlackItalic,
-    Extension = .ttf
 ]
 
 % Here are some other weights:
@@ -123,7 +74,8 @@
 % \renewcommand{\rmdefault}{ptm} % Cambia el tipo de letra a Times
 
 % Configuración de títulos de secciones
-\titleformat{\section}[hang]{\Large\bfseries}{\thesection}{2pc}{}
+\titleformat{\section}[hang]{\SpaceGrotesk\Large\bfseries}{\thesection}{2pc}{}
+
 \titlespacing*{\section}{0pt}{0pt}{8pt}
 
 % Configuración de párrafos
@@ -141,21 +93,20 @@
 \newcommand{\humanity}{Humanity\xspace}
 \newcommand{\hunters}{Hunters\xspace}
 \newcommand{\TWD}{ \textbf{TWD}\xspace}
-\newcommand{\Neue}[1]{{\NeueFam #1}}
-\newcommand{\Lexica}[1]{{\LexicaFamily #1}}
+% \newcommand{\Neue}[1]{{\NeueFam #1}}
+% \newcommand{\Lexica}[1]{{\LexicaFamily #1}}
 
 % For subsections
 \titleformat{\subsection}[hang]
-{\normalfont\large\bfseries}
+{\SpaceGrotesk\large\bfseries}
 {\thesubsection}{1em}{}
 \titlespacing*{\subsection}{2em}{*1}{*1}
 
 % For subsubsections
 \titleformat{\subsubsection}[hang]
-{\normalfont\normalsize\bfseries}
+{\SpaceGrotesk\normalsize\bfseries}
 {\thesubsubsection}{1em}{}
 \titlespacing*{\subsubsection}{4em}{*1}{*1}
-
 % Configuración del documento
 \begin{document}
 
