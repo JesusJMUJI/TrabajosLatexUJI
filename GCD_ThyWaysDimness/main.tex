@@ -5,7 +5,8 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Para imágenes
 % \usepackage[utf8]{inputenc} % Soporte UTF-8
-\usepackage[spanish]{babel} % Idioma del documento
+\usepackage[spanish, shorthands=off]{babel} % Idioma del documento
+\usepackage[none]{hyphenat}
 \usepackage[colorlinks]{hyperref} % Para los enlaces
 \usepackage{fancyhdr} % Para encabezados y pies de página
 \usepackage{titlesec} % Control sobre los títulos
@@ -17,6 +18,12 @@
 \usepackage{comment}
 \usepackage{xspace}
 \usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch 3em
 
 % Configuración de márgenes
 \geometry{
@@ -54,7 +61,7 @@
 
 \setmainfont{Inter}[
     Path = ./fonts/,
-    Extension = .ttf,
+    Extension = .otf,
     UprightFont = {*-Regular},
     ItalicFont = {*-Italic},
     BoldFont = {*-Bold},
@@ -88,24 +95,25 @@
 \fancyfoot[C]{\thepage}
 
 \newcommand{\gameTitle}{\textbf{Thy Ways Dimness}}
-\newcommand{\hole}{ Hole\xspace}
-\newcommand{\gunpowder}{ Gunpowder\xspace}
-\newcommand{\humanity}{ Humanity\xspace}
-\newcommand{\hunters}{ Hunters\xspace}
+\newcommand{\hole}{Hole\xspace}
+\newcommand{\gunpowder}{\SpaceGroteskText{Gunpowder}\xspace}
+\newcommand{\humanity}{\SpaceGroteskText{Humanity}\xspace}
+\newcommand{\hunters}{\SpaceGroteskText{Hunters}\xspace}
+\newcommand{\hunter}{\SpaceGroteskText{Hunter}\xspace}
 \newcommand{\TWD}{ \textbf{TWD}\xspace}
-% \newcommand{\Neue}[1]{{\NeueFam #1}}
-% \newcommand{\Lexica}[1]{{\LexicaFamily #1}}
+
+\newcommand{\SpaceGroteskText}[1]{{\SpaceGrotesk #1}}
 
 % For subsections
 \titleformat{\subsection}[hang]
-{\SpaceGrotesk\large\bfseries}
-{\thesubsection}{1em}{}
+{\large\bfseries}
+{\thesubsection}{1em}{\SpaceGroteskText}
 \titlespacing*{\subsection}{2em}{*1}{*1}
 
 % For subsubsections
 \titleformat{\subsubsection}[hang]
-{\SpaceGrotesk\normalsize\bfseries}
-{\thesubsubsection}{1em}{}
+{\normalsize\bfseries}
+{\thesubsubsection}{1em}{\SpaceGroteskText}
 \titlespacing*{\subsubsection}{4em}{*1}{*1}
 % Configuración del documento
 \begin{document}
@@ -140,6 +148,7 @@
 
 % Abstract
 \begin{abstract}
+    % TODO: Alargar el abstract un poco más
     This document contains both the One Sheet and the GCD for the conceptualizaction of \textit{Thy Ways Dimness}, an FPS, pseudo-horror roguelike.
 \end{abstract}
 {\small \textbf{Keywords} \textit{Thy Ways Dimness,} FPS, Roguelike, Horror, Pseudo-Horror, Game Design, GCD, One Sheet}
@@ -159,11 +168,11 @@
 % BEGINNING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{One Sheet}
+\section*{\huge{One Sheet}}
 \addcontentsline{toc}{section}{One Sheet}
 \input{./chapters/onesheet.tex}
 \newpage
-\section*{Game Design Document}
+\section*{\huge{Game Design Document}}
 \addcontentsline{toc}{section}{Game Design Document}
 \input{./chapters/gcd.tex}
 
