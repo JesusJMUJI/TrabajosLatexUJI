@@ -2,8 +2,8 @@
 \ProvidesClass{mimosis}[2017/08/01 Minimal modern thesis class]
 
 \PassOptionsToPackage{
-  DIV  = 10,    % TODO: Make configurable
-  BCOR = 10mm,  % TODO: Make configurable
+  DIV  = 10,    % Make configurable
+  BCOR = 10mm,  % Make configurable
 }{typearea}
 
 \LoadClass[a4paper,
