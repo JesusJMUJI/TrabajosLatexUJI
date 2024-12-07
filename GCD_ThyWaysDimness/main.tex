@@ -8,6 +8,7 @@
 \usepackage[spanish]{babel} % Idioma del documento
 \usepackage[colorlinks]{hyperref} % Para los enlaces
 \usepackage{fancyhdr} % Para encabezados y pies de página
+\usepackage{lastpage}
 \usepackage{titlesec} % Control sobre los títulos
 \usepackage{color} % Colores
 \usepackage{geometry} % Margenes
@@ -17,7 +18,12 @@
 \usepackage{comment}
 \usepackage{xspace}
 \usepackage{fontspec}
+\usepackage[none]{hyphenat}
+\emergencystretch=1.5em
+\sloppy
 
+\usepackage{plex-otf}
+\renewcommand*\familydefault{\sfdefault}
 % Configuración de márgenes
 \geometry{
  a4paper,
@@ -43,38 +49,8 @@
     ,runbordercolor=Mulberry
 }
 
-
-\newfontfamily\SpaceGrotesk{SpaceGrotesk}[
-    Path = ./fonts/,
-    Extension = .ttf,
-    UprightFont = {*-Regular},
-    BoldFont = {*-Bold},
-]
-
-
-\setmainfont{Inter}[
-    Path = ./fonts/,
-    Extension = .ttf,
-    UprightFont = {*-Regular},
-    ItalicFont = {*-Italic},
-    BoldFont = {*-Bold},
-    BoldItalicFont = {*-BoldItalic},
-]
-
-% Here are some other weights:
-
-% \Light{This is light text.} \\
-% \Medium{This is medium text.} \\
-% \Thin{This is thin text.} \\
-% \XThin{This is extra thin text.} \\
-% \XXThin{This is double extra thin text.} \\
-% \Black{This is black text.}
-
-% Cambiar tipo de letra
-% \renewcommand{\rmdefault}{ptm} % Cambia el tipo de letra a Times
-
 % Configuración de títulos de secciones
-\titleformat{\section}[hang]{\SpaceGrotesk\Large\bfseries}{\thesection}{2pc}{}
+\titleformat{\section}[hang]{\ttfamily\itshape\Large\bfseries}{\thesection}{2pc}{}
 
 \titlespacing*{\section}{0pt}{0pt}{8pt}
 
@@ -84,29 +60,41 @@
 
 % Encabezados y pies de página
 \fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyfoot[C]{\thepage}
+\fancyhead[L]{\ttfamily\itshape GCD - \gameTitle}
 
-\newcommand{\gameTitle}{\textbf{Thy Ways Dimness}}
-\newcommand{\hole}{Hole\xspace}
-\newcommand{\gunpowder}{Gunpowder\xspace}
-\newcommand{\humanity}{Humanity\xspace}
-\newcommand{\hunters}{Hunters\xspace}
-\newcommand{\TWD}{ \textbf{TWD}\xspace}
-% \newcommand{\Neue}[1]{{\NeueFam #1}}
-% \newcommand{\Lexica}[1]{{\LexicaFamily #1}}
+\fancyhead[R]{\ttfamily\itshape Jesús Jiménez Montero}
+
+\fancyfoot[L]{\ttfamily\itshape\parbox{12cm}{\leftmark}}
+
+\fancyfoot[R]{\ttfamily\itshape Página \thepage \xspace de \pageref*{LastPage}} % Monospaced italic font for page numbers
+
+\setlength{\headheight}{14.5pt} % Adjust this value if needed
+
+\pagestyle{fancy}
+
+% \renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\gameTitle}{\texttt{\textbf{Thy Ways Dimness}}}
+\newcommand{\hole}{\texttt{\textit{Hole}}\xspace}
+\newcommand{\gunpowder}{\texttt{\textit{Gunpowder}}\xspace}
+\newcommand{\humanity}{\texttt{\textit{Humanity}}\xspace}
+\newcommand{\hunters}{\texttt{\textit{Hunters}}\xspace}
+\newcommand{\hunter}{\texttt{\textit{Hunter}}\xspace}
+\newcommand{\TWD}{\texttt{\textbf{TWD}}\xspace}
 
 % For subsections
 \titleformat{\subsection}[hang]
-{\SpaceGrotesk\large\bfseries}
+{\large\bfseries}
 {\thesubsection}{1em}{}
 \titlespacing*{\subsection}{2em}{*1}{*1}
 
 % For subsubsections
 \titleformat{\subsubsection}[hang]
-{\SpaceGrotesk\normalsize\bfseries}
+{\normalsize\bfseries}
 {\thesubsubsection}{1em}{}
 \titlespacing*{\subsubsection}{4em}{*1}{*1}
+
 % Configuración del documento
 \begin{document}
 
