@@ -83,6 +83,17 @@
 \section{Mecánicas}
 % Correct and detailed description of mechanics:
     \subsection{Mecánicas de jugador}
+        Ya que en anteriores secciones se ha explicado de forma breve de que dispone el jugador para defenderse, esta sección se centrará un poco más en como interactúan las armas.
+        En \gameTitle\xspace el jugador dispone de 3 armas diferentes con la que combatir:
+            \begin{enumerate}
+                \item \textbf{\textit{Rifle}} \\
+                Permite fuego rápido a una cadencia de disparo alta; aunque sin mucho daño. Esta arma se centra en ser lo más versátil posible; y permitir usarse en cualquier situación y adaptarse.
+                \item \textbf{\textit{Escopeta}} \\
+                Daño moderado a alto, a corta distancia y cadencia moderada, dispara 16 perdigones que acumulan daño por cada perdigón que impacte en el enemigo. Además, estos se disparan en un cono, por lo tanto, la precisión se disminuye con la distancia, empeorando la efectividad del arma a distancia.
+                \item \textbf{\textit{Francotirador}} \\
+                Daño muy alto, a cualquier distancia; aunque solo un disparo por cargador. Esta arma se centra en resolver situaciones específicas que las otras armas no cubren.
+
+            \end{enumerate}
     \subsection{Mecánicas de NPC}
     \subsection{Mecánicas nucleares \textit{(core)}}
 
@@ -95,23 +106,23 @@
     \newpage
 
     \newlength{\mtL}
-\setlength{\mtL}{.8\paperheight}% the next hsize
-\addtolength\mtL{-\headwidth}
-\newpage
-\addtolength\headwidth{\mtL}
-    %landscape
-\pdfpageheight=\paperwidth
-\pdfpagewidth=\paperheight
-\paperwidth=\pdfpagewidth
-\paperheight=\pdfpageheight
+    \setlength{\mtL}{.8\paperheight}% the next hsize
+    \addtolength\mtL{-\headwidth}
+    \newpage
+    \addtolength\headwidth{\mtL}
+        %landscape
+    \pdfpageheight=\paperwidth
+    \pdfpagewidth=\paperheight
+    \paperwidth=\pdfpagewidth
+    \paperheight=\pdfpageheight
 
-%text width and height
-\begingroup
-\vsize=.8\pdfpageheight % do what you like
-\hsize=.8\pdfpagewidth  % do what you like
-\textwidth=\hsize
-\textheight=\vsize
-% you can specify the margins
+    %text width and height
+    \begingroup
+    \vsize=.8\pdfpageheight % do what you like
+    \hsize=.8\pdfpagewidth  % do what you like
+    \textwidth=\hsize
+    \textheight=\vsize
+    % you can specify the margins
 
         \subsection{Tabla de mecánicas}
             % \begin{longtable}{|c|c|c|c|c|c|c|}
@@ -144,10 +155,10 @@
             % \end{longtable}
             % \newpage
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage{graphicx}
-\begin{table}[h]
+    % Please add the following required packages to your document preamble:
+    % \usepackage{booktabs}
+    % \usepackage{graphicx}
+    \begin{table}[h]
     \centering
     \label{tab:user_actions}
     \resizebox{\textwidth}{!}{%
