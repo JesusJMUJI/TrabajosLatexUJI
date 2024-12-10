@@ -61,47 +61,176 @@
             \item \textbf{Armas} \\
                 Cada arma se controla de la misma manera, \textit{click} izquierdo dispara, \textit{click} derecho usa la habilidad especial del arma y \textit{R} para recargar.
         \end{enumerate}
-    \subsection{Reglas Escritas}
+    \subsection{Reglas Escritas} \label{reglasEscritas}
     % ¿Cuál es la información y las reglas que se proporcionarán explícitamente a los jugadores, por ejemplo, en un manual o tutorial?
     % Detalla las reglas e instrucciones que se compartirán directamente con los jugadores para ayudarles a entender cómo jugar.
-        \textit{Thy Ways Dimness} prefiere el estilo de \textit{show don't tell approach} \footnote{Método mostrar en vez de contar}. Se haría un escenario controlado al inicio del juego para enseñar a los jugadores como funcionaría la mecánica de la luz, aparte de localizar mediante el sonido a los enemigos cercanos.
-        No obstante, se usaría el recurso de dejar notas esparcidas por
+        \textit{Thy Ways Dimness} prefiere el estilo de \textit{show don't tell approach} \footnote{\href{https://en.wikipedia.org/wiki/Show,_don\%27t_tell}{Método mostrar en vez de contar en \textit{Wikipedia}}}. Se haría un escenario controlado al inicio del juego para enseñar a los jugadores como funcionaría la mecánica de la luz, aparte de localizar mediante el sonido a los enemigos cercanos.
+        No obstante, se usaría el recurso de dejar notas esparcidas por otros \hunters que fueron en otras misiones para ayudar a otros \hunters.
     \subsection{Reglas de Comportamiento}
-    % ¿Cómo deben comportarse los jugadores y los elementos del juego en diferentes situaciones?
-    % Define las interacciones permitidas y prohibidas entre los jugadores y los elementos del juego.
-
+        % ¿Cómo deben comportarse los jugadores y los elementos del juego en diferentes situaciones?
+        % Define las interacciones permitidas y prohibidas entre los jugadores y los elementos del juego.
+        Los jugadores deben actuar correctamente según el tipo de \textit{desafío} que se les plantea usando las armas para derrotar a las criaturas. Por ejemplo, un método que los jugadores podrían usar es el hecho de usar las propias bengalas para ir restando vida a las criaturas lentamente. Esto sería menos apropiada de lidiar con este ejemplo, no obstante, el juego quisiese ser lo más abierto posible a situaciones \textit{"inesperadas"}.
     \subsection{Reglas competitivas}
     % ¿Cómo se estructura la competición en tu juego y cuáles son las reglas que la gobiernan?
     % Describe cómo los jugadores competirán entre sí o contra el juego, y qué reglas determinarán el ganador y el perdedor.
-
+        El juego se centra en el modo campaña / de un jugador. Sin embargo, en el modo multijugador (\textit{explicado extensivamente en \ref{multiplayer}}), las reglas para ganar en el modo \textit{Versus}, se inspira en las reglas clásicas del multijugador de \textit{Quake} y \textit{Doom}.\\
+        Los jugadores ganan puntos haciendo \textit{frags} o \textit{kills}, pero no pierden puntos por morir; sin embargo, el tiempo para reaparecer ocasiona que mientras el jugador esté en este estado, no pudiese seguir haciendo \textit{frags}, por lo tanto, no gana más puntos y deja a otros jugadores seguir con la racha.
     \subsection{Consejos de juego}
     % ¿Qué pistas o consejos se proporcionarán a los jugadores para ayudarles a navegar por los desafíos del juego?
     % Define cualquier ayuda, pista o consejo que los jugadores puedan recibir para superar obstáculos o resolver dilemas en el juego.
-
+        Los consejos se incluirían junto a la explicación de \ref{reglasEscritas}; es decir, los consejos irían inherentemente explicados en estas notas dejadas por otros \hunters. También serían interesante incluir una especie de \textit{wiki} interna dentro del juego con datos sobre criaturas y leer sobre sus debilidades.
 
 \section{Mecánicas}
-Correct and detailed description of mechanics:
+% Correct and detailed description of mechanics:
     \subsection{Mecánicas de jugador}
     \subsection{Mecánicas de NPC}
-    \subsection{Mecánicas nucleares (core)}
-    \subsection{Tabla de mecánicas}
-    Mechanics Table includes:
-        \subsubsection{Description}
-        \subsubsection{Attributes}
-        \subsubsection{Dynamics and Actions}
-        \subsubsection{Triggers}
-        \subsubsection{Resources}
+    \subsection{Mecánicas nucleares \textit{(core)}}
+
+    % % Mechanics Table includes:
+    % \subsubsection{Description}
+    % \subsubsection{Attributes}
+    % \subsubsection{Dynamics and Actions}
+    % \subsubsection{Triggers}
+    % \subsubsection{Resources}
+    \newpage
+
+    \newlength{\mtL}
+\setlength{\mtL}{.8\paperheight}% the next hsize
+\addtolength\mtL{-\headwidth}
+\newpage
+\addtolength\headwidth{\mtL}
+    %landscape
+\pdfpageheight=\paperwidth
+\pdfpagewidth=\paperheight
+\paperwidth=\pdfpagewidth
+\paperheight=\pdfpageheight
+
+%text width and height
+\begingroup
+\vsize=.8\pdfpageheight % do what you like
+\hsize=.8\pdfpagewidth  % do what you like
+\textwidth=\hsize
+\textheight=\vsize
+% you can specify the margins
+
+        \subsection{Tabla de mecánicas}
+            % \begin{longtable}{|c|c|c|c|c|c|c|}
+            %     \hline
+            %     USER ACTIONS \\ \hline
+            %     & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
+            %     Movimiento & Mueve at \hunter en dirección lateral  &  &  &  &  &  \\ \hline
+            %     Salto & Mueve al \hunter en dirección perpendicular (altura) &  &  &  &  &  \\ \hline
+            %     Disparo & Gasta un bala y dispara un proyectil dependiendo del arma equipada &  &  &  &  &  \\ \hline
+            %     D. Alternativo & Gasta todo el cargador y dispara una acción especial dependieno del arma equipada &  &  &  &  &  \\ \hline
+            %     Recarga &  &  &  &  &  &  \\ \hline
+            %     \end{longtable}
+            % \begin{longtable}{|c|c|c|c|c|c|c|}
+            %     \hline
+            %     LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº \\ \hline
+            %     ENTITIES & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            % \end{longtable}
+            % \begin{longtable}{|c|c|c|c|c|c|c|}
+            %     \hline
+            %     LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº \\ \hline
+            %     ENTITIES & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            %     &  &  &  &  &  &  \\ \hline
+            % \end{longtable}
+            % \newpage
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[h]
+    \centering
+    \label{tab:user_actions}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lllllll@{}}
+    \toprule
+    \textbf{USER ACTIONS} &
+       &
+       &
+       &
+       &
+       &
+       \\ \midrule
+    \textit{} &
+      \textit{Descripción} &
+      \textit{Atributos} &
+      \textit{Dinámicas-Acciones} &
+      \textit{Triggers} &
+      \textit{Recursos} &
+      \textit{Notas} \\ \midrule
+    \textbf{Movimiento} &
+      \multicolumn{1}{l|}{Mueve at \%hunter en dirección lateral} &
+      \multicolumn{1}{l|}{· Velocidad} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\
+    \textbf{Salto} &
+      \multicolumn{1}{l|}{Mueve al \%hunter en dirección perpendicular (altura)} &
+      \multicolumn{1}{l|}{· Altura} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\
+    \textbf{Disparo} &
+      \multicolumn{1}{l|}{Gasta un bala y dispara un proyectil dependiendo del arma equipada} &
+      \multicolumn{1}{l|}{· Munición} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\
+    \textbf{D. Alternativo} &
+      \multicolumn{1}{l|}{Gasta todo el cargador y dispara una acción especial dependieno del arma equipada} &
+      \multicolumn{1}{l|}{· Munición} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\
+    \textbf{Recarga activa} &
+      \multicolumn{1}{l|}{Recarga el arma actual rápidamente mediante input del usuario} &
+      \multicolumn{1}{l|}{N/A} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\
+    \textbf{Recarga pasiva} &
+      \multicolumn{1}{l|}{Recarga el arma en mochila lentamente, sin requerir de input} &
+      \multicolumn{1}{l|}{N/A} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+      \multicolumn{1}{l|}{} &
+       \\ \bottomrule
+    \end{tabular}%
+    }
+    \end{table}
+
+    \endgroup
+    \newpage
+    \addtolength\headwidth{-1\mtL}
+    \paperwidth=\pdfpageheight
+    \paperheight=\pdfpagewidth
+    \pdfpageheight=\paperheight
+    \pdfpagewidth=\paperwidth
 
 \section{Game Balance}
     \subsection{Descripción de relaciones transitivas}
     \subsection{Descripción de relaciones intransitivas}
     \subsection{Momentos injustos}
-    Evaluation of whether there may be unfair moments.
+    % Evaluation of whether there may be unfair moments.
     \subsection{ evolución de la dificultad.}
-    Description of the evolution of difficulty.
+    % Description of the evolution of difficulty.
 
 \section{Gameplay}
-Development of the challenge structure:
+% Development of the challenge structure:
     \subsection{Retos atómicos}
     \subsection{Retos intermedios }
     \subsection{Reto final}
@@ -114,7 +243,7 @@ Development of the challenge structure:
     \subsection{Croquis}
 
 \section{Diseño de Sonido}
-    \subsection{banda Sonora} \label{ost}
+    \subsection{Banda Sonora} \label{ost}
         La música sería una mezcla de música ambiental pesada y monótona similar a los juegos de terror en las secciones entre batallas. El combate utilizará una mezcla de estos sonidos monótonos pero con \textit{música}.
         La principal inspiración del estilo de la música es el juego \textbf{CULTIC}, así que una
         % BUG: Incluir referencia bibliográfica a CULTIC
