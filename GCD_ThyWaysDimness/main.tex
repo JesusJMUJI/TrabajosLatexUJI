@@ -1,17 +1,17 @@
-% !TEX program = xelatex
+% !TEX program = lualatex
 % ©2023 Alonso Madrigal Hernandez. Todos los derechos reservados. Este código es una creación original de Alonso Madrigal Hernandez y está protegido por las leyes de derechos de autor. %
-
 
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Para imágenes
 % \usepackage[utf8]{inputenc} % Soporte UTF-8
-\usepackage[spanish,es-noshorthands]{babel} % Idioma del documento
+\usepackage[spanish]{babel} % Idioma del documento
 \usepackage[colorlinks]{hyperref} % Para los enlaces
 \usepackage{fancyhdr} % Para encabezados y pies de página
 \usepackage{lastpage}
 \usepackage{titlesec} % Control sobre los títulos
 \usepackage{color} % Colores
 \usepackage{geometry} % Margenes
+\usepackage{afterpage}
 \usepackage{setspace} % Espaciado entre lineas
 \usepackage[dvipsnames]{xcolor}
 \usepackage{microtype}
@@ -20,14 +20,14 @@
 \usepackage{fontspec}
 \usepackage{multicol}
 \usepackage{enumitem}
-\usepackage{longtable}
-\usepackage{pdflscape}
 \usepackage{booktabs}
+\usepackage{float}
 
-
-
-\usepackage{plex-otf}
-\renewcommand*\familydefault{\sfdefault}
+% \usepackage{plex-otf}
+\usepackage[sfdefault]{plex-sans}
+\usepackage{plex-serif}
+\usepackage{plex-mono}
+% \renewcommand*\familydefault{\sfdefault}
 % Configuración de márgenes
 \geometry{
  a4paper,
@@ -69,7 +69,7 @@
 \fancyhead[R]{\ttfamily\itshape Jesús Jiménez Montero}
 
 \fancyfoot[L]{\ttfamily\itshape\parbox{12cm}{\leftmark}}
-
+\fancyfoot[C]{\hyperlink{toc}{\ttfamily Volver a Indice}}
 \fancyfoot[R]{\ttfamily\itshape Página \thepage \xspace de \pageref*{LastPage}} % Monospaced italic font for page numbers
 
 \setlength{\headheight}{14.5pt} % Adjust this value if needed
@@ -79,7 +79,7 @@
 % \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\newcommand{\gameTitle}{\texttt{\textbf{Thy Ways Dimness}}}
+\newcommand{\gameTitle}{\texttt{\textbf{Thy Ways Dimness}}\xspace}
 \newcommand{\hole}{\texttt{\textit{Hole}}\xspace}
 \newcommand{\gunpowder}{\texttt{\textit{Gunpowder}}\xspace}
 \newcommand{\humanity}{\texttt{\textit{Humanity}}\xspace}
@@ -134,8 +134,17 @@
 
 % Índice de contenidos
 %change the table of contents title
-\renewcommand{\contentsname}{Table of Contents}
-\tableofcontents
+% \renewcommand{\contentsname}{Indice del documento}
+\hypertarget{toc}{}
+\begin{multicols}{2}
+    \tableofcontents
+\end{multicols}
+\newpage
+
+% \renewcommand{\listtablename}{Lista de }
+\begin{multicols}{2}
+    \listoftables
+\end{multicols}
 \newpage
 
 % Índice de figuras
@@ -155,6 +164,4 @@
 \addcontentsline{toc}{section}{Game Design Document}
 \input{./chapters/gcd.tex}
 
-
 \end{document}
-

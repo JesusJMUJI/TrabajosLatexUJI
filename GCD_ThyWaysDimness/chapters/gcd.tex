@@ -26,225 +26,244 @@
             Otro punto a considerar en el \textit{Level Design} (\ref{levelDesign}) sería el incluir exploración en el nivel, parecido a cómo los juegos \textit{DOOM 2016} y \textit{DOOM Eternal} lo hacen. Los niveles incluyen arenas y encuentros secretos más difíciles, aparte de coleccionables.
             % BUG: Incluir referencia bibliográfica a DOOM 2016 y DOOM Eternal
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Reglas de juego}
 % Develop the characteristics of the rules in relation to:
+    \begin{multicols}{2}
 
-    \subsection{Objetivos}
-    % ¿Cuál es el objetivo principal que los jugadores deben alcanzar para tener éxito en tu videojuego?
-    % Define claramente qué deben lograr los jugadores para ganar o avanzar en el juego. Puede ser recolectar objetos, llegar a un destino, resolver un puzzle, etc.
+        \subsection{Objetivos}
+        % ¿Cuál es el objetivo principal que los jugadores deben alcanzar para tener éxito en tu videojuego?
+        % Define claramente qué deben lograr los jugadores para ganar o avanzar en el juego. Puede ser recolectar objetos, llegar a un destino, resolver un puzzle, etc.
         El objetivo final es el hecho de llegar al final del nivel, ya sea completándolo lo más rápido posible, matando el mayor número de enemigos,\dots\space Y en cuanto al juego en general, este objetivo final sería acabar el juego derrotando a un \textit{boss} final.
-    \subsection{Límites}
-    % ¿Cuáles son las restricciones y límites que los jugadores enfrentarán durante el juego?
-    % Describe las restricciones de tiempo, espacio, recursos, o acciones que los jugadores tendrán mientras juegan.
+        \subsection{Límites}
+        % ¿Cuáles son las restricciones y límites que los jugadores enfrentarán durante el juego?
+        % Describe las restricciones de tiempo, espacio, recursos, o acciones que los jugadores tendrán mientras juegan.
         Los límites del juego serían principalmente la luz y la visión. La luz es un recurso limitado que se recarga con el tiempo, y la visión es el recurso principal para poder ver a los enemigos y poder atacarles.
 
-    \subsection{Jugadores}
-    % ¿Cómo se describe a los jugadores dentro de tu juego y cuál es su rol?
-    % Define el número, las relaciones, las habilidades, características y limitaciones de los jugadores en el juego, así como su propósito o misión.
+        \subsection{Jugadores}
+        % ¿Cómo se describe a los jugadores dentro de tu juego y cuál es su rol?
+        % Define el número, las relaciones, las habilidades, características y limitaciones de los jugadores en el juego, así como su propósito o misión.
         Los jugadores son \hunters, y su rol es el de cazar a los monstruos oscuros que han invadido la tierra. Solo hay un jugador en la partida, y estos pueden interactuar con el mundo y los enemigos, mediante las herramientas que se les proporcionan.
         La misión del jugador sería acabar con las fuerzas enemigas que brotan de \hole para conseguir un futuro para la humanidad.
 
-    \subsection{Obstáculos y conflictos}
-    % ¿Qué desafíos y obstáculos enfrentarán los jugadores en tu juego?
-    % Describe los diferentes desafíos, enemigos, o dilemas que los jugadores deben superar para progresar.
+        \subsection{Obstáculos y conflictos}
+        % ¿Qué desafíos y obstáculos enfrentarán los jugadores en tu juego?
+        % Describe los diferentes desafíos, enemigos, o dilemas que los jugadores deben superar para progresar.
         A los jugadores su obstáculo principal, serían los enemigos, y su forma particular de derrotarlos usando la luz.
-    \subsection{Reglas fundacionales}
-    % ¿Cuáles son las reglas básicas que gobiernan el mundo de tu juego?
-    % Establece las reglas que definen la lógica, la física y la estructura del mundo del juego.
+        \subsection{Reglas fundacionales}
+        % ¿Cuáles son las reglas básicas que gobiernan el mundo de tu juego?
+        % Establece las reglas que definen la lógica, la física y la estructura del mundo del juego.
         Los jugadores deben recurrir a las herramientas que dotan a este a completar los niveles. La luz se usa como método tanto jugable como \textit{molestia}; la oscuridad es "enemigo" natural de luz, y los jugadores hacen la decisión lógica de iluminar el entorno; sin embargo la luz también se usa para derrotar los enemigos (como obstáculo pertinente).
-    \subsection{Reglas Operacionales}
-    % ¿Cómo se juega tu videojuego y cuáles son las reglas que los jugadores deben seguir mientras juegan?
-    % Define las instrucciones básicas sobre cómo se juega, incluyendo controles, progresión y estrategias básicas.
+        \subsection{Reglas Operacionales}
+        % ¿Cómo se juega tu videojuego y cuáles son las reglas que los jugadores deben seguir mientras juegan?
+        % Define las instrucciones básicas sobre cómo se juega, incluyendo controles, progresión y estrategias básicas.
         \begin{enumerate}[label=\alph*)]
             \item \textbf{Movimiento} \\
-                Los jugadores se mueven mediante el esquema clásico de controles para un \textit{FPS}, aunque el juego permite cierta libertad de movimiento. Se permite \textit{strafing} \footnote{\href{https://www.youtube.com/watch?v=pUIqVz6qZLc}{\textit{Ejemplo exagerado de strafe jump}}} y se recomienda como método para evitar ataques y el salto también se le otorga cierta movilidad lateral, para uso activo (esquive) y pasivo (plataformas).
+            Los jugadores se mueven mediante el esquema clásico de controles para un \textit{FPS}, aunque el juego permite cierta libertad de movimiento. Se permite \textit{strafing} \footnote{\href{https://www.youtube.com/watch?v=pUIqVz6qZLc}{\textit{Ejemplo exagerado de strafe jump}}} y se recomienda como método para evitar ataques y el salto también se le otorga cierta movilidad lateral, para uso activo (esquive) y pasivo (plataformas).
             \item \textbf{Armas} \\
-                Cada arma se controla de la misma manera, \textit{click} izquierdo dispara, \textit{click} derecho usa la habilidad especial del arma y \textit{R} para recargar.
+            Cada arma se controla de la misma manera, \textit{click} izquierdo dispara, \textit{click} derecho usa la habilidad especial del arma y \textit{R} para recargar.
         \end{enumerate}
+
     \subsection{Reglas Escritas} \label{reglasEscritas}
     % ¿Cuál es la información y las reglas que se proporcionarán explícitamente a los jugadores, por ejemplo, en un manual o tutorial?
     % Detalla las reglas e instrucciones que se compartirán directamente con los jugadores para ayudarles a entender cómo jugar.
-        \textit{Thy Ways Dimness} prefiere el estilo de \textit{show don't tell approach} \footnote{\href{https://en.wikipedia.org/wiki/Show,_don\%27t_tell}{Método mostrar en vez de contar en \textit{Wikipedia}}}. Se haría un escenario controlado al inicio del juego para enseñar a los jugadores como funcionaría la mecánica de la luz, aparte de localizar mediante el sonido a los enemigos cercanos.
-        No obstante, se usaría el recurso de dejar notas esparcidas por otros \hunters que fueron en otras misiones para ayudar a otros \hunters.
+    \textit{Thy Ways Dimness} prefiere el estilo de \textit{show don't tell approach} \footnote{\href{https://en.wikipedia.org/wiki/Show,_don\%27t_tell}{Método mostrar en vez de contar en \textit{Wikipedia}}}. Se haría un escenario controlado al inicio del juego para enseñar a los jugadores como funcionaría la mecánica de la luz, aparte de localizar mediante el sonido a los enemigos cercanos.
+    No obstante, se usaría el recurso de dejar notas esparcidas por otros \hunters que fueron en otras misiones para ayudar a otros \hunters.
     \subsection{Reglas de Comportamiento}
-        % ¿Cómo deben comportarse los jugadores y los elementos del juego en diferentes situaciones?
-        % Define las interacciones permitidas y prohibidas entre los jugadores y los elementos del juego.
-        Los jugadores deben actuar correctamente según el tipo de \textit{desafío} que se les plantea usando las armas para derrotar a las criaturas. Por ejemplo, un método que los jugadores podrían usar es el hecho de usar las propias bengalas para ir restando vida a las criaturas lentamente. Esto sería menos apropiada de lidiar con este ejemplo, no obstante, el juego quisiese ser lo más abierto posible a situaciones \textit{"inesperadas"}.
+    % ¿Cómo deben comportarse los jugadores y los elementos del juego en diferentes situaciones?
+    % Define las interacciones permitidas y prohibidas entre los jugadores y los elementos del juego.
+    Los jugadores deben actuar correctamente según el tipo de \textit{desafío} que se les plantea usando las armas para derrotar a las criaturas. Por ejemplo, un método que los jugadores podrían usar es el hecho de usar las propias bengalas para ir restando vida a las criaturas lentamente. Esto sería menos apropiada de lidiar con este ejemplo, no obstante, el juego quisiese ser lo más abierto posible a situaciones \textit{"inesperadas"}.
     \subsection{Reglas competitivas}
     % ¿Cómo se estructura la competición en tu juego y cuáles son las reglas que la gobiernan?
     % Describe cómo los jugadores competirán entre sí o contra el juego, y qué reglas determinarán el ganador y el perdedor.
-        El juego se centra en el modo campaña / de un jugador. Sin embargo, en el modo multijugador (\textit{explicado extensivamente en \ref{multiplayer}}), las reglas para ganar en el modo \textit{Versus}, se inspira en las reglas clásicas del multijugador de \textit{Quake} y \textit{Doom}.\\
-        Los jugadores ganan puntos haciendo \textit{frags} o \textit{kills}, pero no pierden puntos por morir; sin embargo, el tiempo para reaparecer ocasiona que mientras el jugador esté en este estado, no pudiese seguir haciendo \textit{frags}, por lo tanto, no gana más puntos y deja a otros jugadores seguir con la racha.
+    El juego se centra en el modo campaña / de un jugador. Sin embargo, en el modo multijugador (\textit{explicado extensivamente en \ref{multiplayer}}), las reglas para ganar en el modo \textit{Versus}, se inspira en las reglas clásicas del multijugador de \textit{Quake} y \textit{Doom}.\\
+    Los jugadores ganan puntos haciendo \textit{frags} o \textit{kills}, pero no pierden puntos por morir; sin embargo, el tiempo para reaparecer ocasiona que mientras el jugador esté en este estado, no pudiese seguir haciendo \textit{frags}, por lo tanto, no gana más puntos y deja a otros jugadores seguir con la racha.
     \subsection{Consejos de juego}
     % ¿Qué pistas o consejos se proporcionarán a los jugadores para ayudarles a navegar por los desafíos del juego?
     % Define cualquier ayuda, pista o consejo que los jugadores puedan recibir para superar obstáculos o resolver dilemas en el juego.
-        Los consejos se incluirían junto a la explicación de \ref{reglasEscritas}; es decir, los consejos irían inherentemente explicados en estas notas dejadas por otros \hunters. También serían interesante incluir una especie de \textit{wiki} interna dentro del juego con datos sobre criaturas y leer sobre sus debilidades.
+    Los consejos se incluirían junto a la explicación de \ref{reglasEscritas}; es decir, los consejos irían inherentemente explicados en estas notas dejadas por otros \hunters. También serían interesante incluir una especie de \textit{wiki} interna dentro del juego con datos sobre criaturas y leer sobre sus debilidades.
+    \end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Mecánicas}
 % Correct and detailed description of mechanics:
-    \subsection{Mecánicas de jugador}
+% https://miro.com/app/board/o9J_k0u2kEo=/
+
+    \subsection{Mecánicas de Jugador}
+    TODO Añadir más mecánicas de jugador
+    \subsection{Mecánicas Primarias de Armas}
         Ya que en anteriores secciones se ha explicado de forma breve de que dispone el jugador para defenderse, esta sección se centrará un poco más en como interactúan las armas.
-        En \gameTitle\xspace el jugador dispone de 3 armas diferentes con la que combatir:
+        En \gameTitle el jugador dispone de 3 armas diferentes con la que combatir:
             \begin{enumerate}
-                \item \textbf{\textit{Rifle}} \\
+                \item \textbf{\textit{Luminador}} \\
                 Permite fuego rápido a una cadencia de disparo alta; aunque sin mucho daño. Esta arma se centra en ser lo más versátil posible; y permitir usarse en cualquier situación y adaptarse.
-                \item \textbf{\textit{Escopeta}} \\
+                \item \textbf{\textit{Luzsparcidor}} \\
                 Daño moderado a alto, a corta distancia y cadencia moderada, dispara 16 perdigones que acumulan daño por cada perdigón que impacte en el enemigo. Además, estos se disparan en un cono, por lo tanto, la precisión se disminuye con la distancia, empeorando la efectividad del arma a distancia.
-                \item \textbf{\textit{Francotirador}} \\
-                Daño muy alto, a cualquier distancia; aunque solo un disparo por cargador. Esta arma se centra en resolver situaciones específicas que las otras armas no cubren.
-
+                \item \textbf{\textit{Fotón}} \\
+                Daño muy alto, a cualquier distancia; aunque solo un disparo por cargador. Este arma se centra en resolver situaciones específicas que las otras armas no cubren. Además, este arma dispone de una \textit{pseudo-habilidad} que permite usar una mirilla la cual permite discernir siluetas en la oscuridad; pero no mucho más, para no dejar obsoletas las mecánicas de luz.
             \end{enumerate}
-    \subsection{Mecánicas de NPC}
-    \subsection{Mecánicas nucleares \textit{(core)}}
 
+    \subsection{Mecánicas Secundaria de Armas} \label{mecanicasSecundarias}
+        Las armas disponen de una \textit{habilidad} secundaria que usa de modo \textit{utilitario}, es decir, su objetivo principal no es de dañar enemigos, sino ayudar al jugador a realizar ciertas “tareas”, como iluminar habitaciones y revelar enemigos.
+        Estas se clasifican según el arma, respectivamente:
+        \begin{enumerate}
+            \item \textbf{\textit{Nadaluz}} \\
+                Consume 1/3 del cargador para disparar una bengala que ilumina una zona de forma amplia y revela enemigos en el radio. También puede ser disparada hacia las paredes para enganchar la granada y convertirla en una fuente de luz estacionaria.
+                Esta bengala especial contiene un radio secundario de luz que revela de forma parcial a los enemigos que no estén dentro del radio primario de la bengala.
+            \item \textbf{\textit{Clusterminador}} \\
+                Se dispara una carga hacia el aire, la cual se debe activar de nuevo para disparar multiple bengalas en zona muy amplia las cuales disponen de un radio relativamente pequeño. Necesita la mitad del cargador para activarse.
+                Su utilidad se refuerza en salas más abiertas o con muchos obstáculos, ya que los clústeres rebotan y esto hace que se ilumine la sala por trozos pequeños.
+            \item \textbf{\textit{Carga Lúminica}} \\
+                Dispara un rayo lumínico la cual sí hace daño a los enemigos, y triplica el daño si el enemigo está en la oscuridad. Además, crea un pequeño radio de luz a modo de rastro donde se disparó el rayo, y todos los enemigos que hayan sido alcanzados por este radio, serán permanentemente revelados.
+                Usa todo el cargador del arma y tiene un pequeño \textit{cooldown} entre usos.
+        \end{enumerate}
+
+    \subsection{Mecánicas de NPC}
+        Los enemigos de \TWD se dividen en 3 categorías:
+            \begin{enumerate}
+                \item \textbf{\textit{Corta distancia / "fodders"}} \\
+                    Intentan abrumar al jugador y lo distraen de otras amenazas más importantes suelen ir en grupos en altamente concentrados.
+                \item  \textbf{\textit{A distancia / "rangers"}} \\
+                    Crean presión al jugador para mantenerse en movimiento y castigan movimientos previsibles o mantener la posición mucho tiempo.
+                \item  \textbf{\textit{Especiales}} \\
+                    Enemigos que sirven un rol o propósito específico.
+                    \begin{enumerate}
+                        \item \textbf{\textit{Escuderos}}\\
+                            Proporcionan cobertura a los enemigos cercanos y se mueven lentamente.
+                        \item \textbf{\textit{Oscurecedores}}\\
+                            Se mueven al grupo más grande de enemigos y crean zonas de oscuridad que impiden la visión del jugador y repelen cualquier tipo de luz.
+                    \end{enumerate}
+            \end{enumerate}
+
+    \subsection{Mecánicas \textit{(core)} / Nucleares }
+        Las mecánicas \textit{core} como el nombre de este apartado indica, en \TWD pueden indicarse como las mecánicas de luz y oscuridad del juego además de las mecánicas que incluyen el uso inteligente los recursos del jugador, sean las armas o el propio movimiento de este para esquivar al peligro.
     % % Mechanics Table includes:
     % \subsubsection{Description}
     % \subsubsection{Attributes}
     % \subsubsection{Dynamics and Actions}
     % \subsubsection{Triggers}
     % \subsubsection{Resources}
-    \newpage
 
-    \newlength{\mtL}
-    \setlength{\mtL}{.8\paperheight}% the next hsize
-    \addtolength\mtL{-\headwidth}
-    \newpage
-    \addtolength\headwidth{\mtL}
-        %landscape
-    \pdfpageheight=\paperwidth
-    \pdfpagewidth=\paperheight
-    \paperwidth=\pdfpagewidth
-    \paperheight=\pdfpageheight
+    \subsection{Tablas de Mecánicas}
+                \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Movimiento}}         &                                                      \\ \hline
+                    \textbf{Descripción}        & Mueve al \hunter en dirección lateral \\
+                    \textbf{Atributos}          & · Velocidad                                          \\
+                    \textbf{Dinámicas-Acciones} & Moverse por el nivel                                 \\
+                    \textbf{Triggers}           & Interruptores (colliders) que activen otros elementos del nivel \\
+                    \textbf{Recursos}           & Ninguno                                                 \\
+                    \textbf{Notas}              & N/A                                                  \\ \hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Movimiento}
+                \end{table}
+            \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Salto}}              & \\\hline
+                    \textbf{Descripción}        & Mueve al \hunter en dirección perpendicular (altura) \\
+                    \textbf{Atributos}          & · Altura \\
+                    \textbf{Dinámicas-Acciones} & Evasión, conseguir altura, plataformas\textbackslash{}dots \\
+                    \textbf{Triggers}           & N/A \\
+                    \textbf{Recursos}           & Número de saltos \\
+                    \textbf{Notas}              & N/A \\\hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Salto}
+            \end{table}
 
-    %text width and height
-    \begingroup
-    \vsize=.8\pdfpageheight % do what you like
-    \hsize=.8\pdfpagewidth  % do what you like
-    \textwidth=\hsize
-    \textheight=\vsize
-    % you can specify the margins
+            \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Disparo}}            & \\\hline
+                    \textbf{Descripción}        & Gasta una bala y dispara un proyectil dependiendo del arma equipada \\
+                    \textbf{Atributos}          & Cadencia de disparo \\
+                    \textbf{Dinámicas-Acciones} & Bajar vida a enemigos, iluminar entorno y enemigos \\
+                    \textbf{Triggers}           & Reacción de los enemigos al ser disparados \\
+                    \textbf{Recursos}           & Munición \\
+                    \textbf{Notas}              & N/A \\\hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Disparo}
+            \end{table}
 
-        \subsection{Tabla de mecánicas}
-            % \begin{longtable}{|c|c|c|c|c|c|c|}
-            %     \hline
-            %     USER ACTIONS \\ \hline
-            %     & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
-            %     Movimiento & Mueve at \hunter en dirección lateral  &  &  &  &  &  \\ \hline
-            %     Salto & Mueve al \hunter en dirección perpendicular (altura) &  &  &  &  &  \\ \hline
-            %     Disparo & Gasta un bala y dispara un proyectil dependiendo del arma equipada &  &  &  &  &  \\ \hline
-            %     D. Alternativo & Gasta todo el cargador y dispara una acción especial dependieno del arma equipada &  &  &  &  &  \\ \hline
-            %     Recarga &  &  &  &  &  &  \\ \hline
-            %     \end{longtable}
-            % \begin{longtable}{|c|c|c|c|c|c|c|}
-            %     \hline
-            %     LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº \\ \hline
-            %     ENTITIES & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            % \end{longtable}
-            % \begin{longtable}{|c|c|c|c|c|c|c|}
-            %     \hline
-            %     LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº & LEVEL/STAGE  Nº \\ \hline
-            %     ENTITIES & Description & Attributes & Dinamics-Actions & Triggers & Resources & Notes \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            %     &  &  &  &  &  &  \\ \hline
-            % \end{longtable}
-            % \newpage
+            \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Disparo Alternativo}} & \\\hline
+                    \textbf{Descripción}         & Gasta el porcentaje del cargador y dispara una accion especial dependiendo del arma equipada \\
+                    \textbf{Atributos}           & Arma equipada \\
+                    \textbf{Dinámicas-Acciones}  & Lanzar proyectil \\
+                    \textbf{Triggers}            & Reacción de los enemigos apropiado al proyectil usado \\
+                    \textbf{Recursos}            & Cargador del arma \\
+                    \textbf{Notas}               & N/A \\\hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Disparo Alternativo}
+            \end{table}
 
-    % Please add the following required packages to your document preamble:
-    % \usepackage{booktabs}
-    % \usepackage{graphicx}
-    \begin{table}[h]
-    \centering
-    \label{tab:user_actions}
-    \resizebox{\textwidth}{!}{%
-    \begin{tabular}{@{}lllllll@{}}
-    \toprule
-    \textbf{USER ACTIONS} &
-       &
-       &
-       &
-       &
-       &
-       \\ \midrule
-    \textit{} &
-      \textit{Descripción} &
-      \textit{Atributos} &
-      \textit{Dinámicas-Acciones} &
-      \textit{Triggers} &
-      \textit{Recursos} &
-      \textit{Notas} \\ \midrule
-    \textbf{Movimiento} &
-      \multicolumn{1}{l|}{Mueve at \%hunter en dirección lateral} &
-      \multicolumn{1}{l|}{· Velocidad} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\
-    \textbf{Salto} &
-      \multicolumn{1}{l|}{Mueve al \%hunter en dirección perpendicular (altura)} &
-      \multicolumn{1}{l|}{· Altura} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\
-    \textbf{Disparo} &
-      \multicolumn{1}{l|}{Gasta un bala y dispara un proyectil dependiendo del arma equipada} &
-      \multicolumn{1}{l|}{· Munición} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\
-    \textbf{D. Alternativo} &
-      \multicolumn{1}{l|}{Gasta todo el cargador y dispara una acción especial dependieno del arma equipada} &
-      \multicolumn{1}{l|}{· Munición} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\
-    \textbf{Recarga activa} &
-      \multicolumn{1}{l|}{Recarga el arma actual rápidamente mediante input del usuario} &
-      \multicolumn{1}{l|}{N/A} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\
-    \textbf{Recarga pasiva} &
-      \multicolumn{1}{l|}{Recarga el arma en mochila lentamente, sin requerir de input} &
-      \multicolumn{1}{l|}{N/A} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-      \multicolumn{1}{l|}{} &
-       \\ \bottomrule
-    \end{tabular}%
-    }
-    \end{table}
+            \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Recarga Activa}}     &  \\\hline
+                    \textbf{Descripción}        & Recarga el arma actual rapidamente mediante input del usuario \\
+                    \textbf{Atributos}          & N/A \\
+                    \textbf{Dinámicas-Acciones} & Restaurar el cargador al completo \\
+                    \textbf{Triggers}           & N/A \\
+                    \textbf{Recursos}           & N/A \\
+                    \textbf{Notas}              & N/A \\\hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Recarga Activa}
+            \end{table}
 
-    \endgroup
-    \newpage
-    \addtolength\headwidth{-1\mtL}
-    \paperwidth=\pdfpageheight
-    \paperheight=\pdfpagewidth
-    \pdfpageheight=\paperheight
-    \pdfpagewidth=\paperwidth
+            \begin{table}[H]
+                \resizebox{\textwidth}{!}{%
+                    \begin{tabular}{ll}
+                    \hline
+                    \textbf{\textit{Recarga Pasiva}}     &  \\\hline
+                    \textbf{Descripción}        & Recarga el arma en mochila lentamente, sin requerir de input \\
+                    \textbf{Atributos}          & N/A \\
+                    \textbf{Dinámicas-Acciones} & Recargar lentamente el cargardor \\
+                    \textbf{Triggers}           & N/A \\
+                    \textbf{Recursos}           & N/A \\
+                    \textbf{Notas}              & N/A \\\hline
+                    \end{tabular}%
+                }
+                \caption{Descripción de Recarga Pasiva}
+            \end{table}
 
 \section{Game Balance}
-    \subsection{Descripción de relaciones transitivas}
-    \subsection{Descripción de relaciones intransitivas}
-    \subsection{Momentos injustos}
+    % docs/game_balance.md
+    \subsection{Relaciones Transitivas}
+        \subsubsection{Dificultad del nivel}
+            Una relacion transitiva obvia es el hecho de la dificultad del propio nivel y de los retos que presenta al jugador poder superarlo; desde enemigos puestos "a malas" para que el jugador se atasque en un combate, o incluso el \textit{layout} del nivel sea un laberinto enrevesado.
+
+    \subsection{Relaciones Intransitivas}
+        \subsubsection{Coste de munición}
+        Debido a que el jugador debe iluminar el entorno de forma continua para poder ver a los enemigos, esto conlleva a que este use más a menudo cualquie recurso lo permita. Por ejemplo, en \textit{Mecánicas secundarias de Armas} (sección: \ref{mecanicasSecundarias}) se menciona que el arma \textit{Nadaluz} consume 1/3 del cargador, y el jugador necesitaria un cargador entero para eliminar a un enemigo o un grupo de ellos; por que obliga al jugador a cuidar en todo momento en cuál es el momento más efectivo para gastar estos recursos.
+    \subsection{Momentos Injustos}
     % Evaluation of whether there may be unfair moments.
-    \subsection{ evolución de la dificultad.}
+        \TWD es un juego de costes y beneficios, y el jugador puede en cualquier momento ser demasiado abrumado por la cantidad de crituras; quedarse sin munición de ninguna arma, ponerse nervioso y no saber salir de la situación.
+    \subsection{Evolución de la Dificultad.}
     % Description of the evolution of difficulty.
 
 \section{Gameplay}
 % Development of the challenge structure:
-    \subsection{Retos atómicos}
-    \subsection{Retos intermedios }
-    \subsection{Reto final}
+    \subsection{Retos Atómicos}
+    \subsection{Retos Intermedios}
+    \subsection{Reto Final}
 
 \section{Level Design} \label{levelDesign}
     \subsection{Beat Chart}
