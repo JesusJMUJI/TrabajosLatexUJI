@@ -1,9 +1,7 @@
-% !TEX program = lualatex
 % ©2023 Alonso Madrigal Hernandez. Todos los derechos reservados. Este código es una creación original de Alonso Madrigal Hernandez y está protegido por las leyes de derechos de autor. %
 
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Para imágenes
-% \usepackage[utf8]{inputenc} % Soporte UTF-8
 \usepackage[spanish]{babel} % Idioma del documento
 \usepackage[colorlinks]{hyperref} % Para los enlaces
 \usepackage{fancyhdr} % Para encabezados y pies de página
@@ -14,20 +12,32 @@
 \usepackage{afterpage}
 \usepackage{setspace} % Espaciado entre lineas
 \usepackage[dvipsnames]{xcolor}
-\usepackage{microtype}
+\usepackage[nopatch=footnote]{microtype}
 \usepackage{comment}
 \usepackage{xspace}
 \usepackage{fontspec}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,fit} % Add this line to include geometric shapes
+
 \usepackage{multicol}
+\usepackage[toc,lof,lot]{multitoc}
+
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{float}
+\usepackage{tablefootnote}
+\usepackage{xhfill}
+\usepackage{todonotes}
+\usepackage{csquotes}
 
 % \usepackage{plex-otf}
 \usepackage[sfdefault]{plex-sans}
 \usepackage{plex-serif}
 \usepackage{plex-mono}
 % \renewcommand*\familydefault{\sfdefault}
+\usepackage[backend=biber,sorting=none]{biblatex} % Para referencias
+\addbibresource{references.bib} % Archivo de referencias
 % Configuración de márgenes
 \geometry{
  a4paper,
@@ -39,7 +49,7 @@
 
 % Configuración del enlace de colores
 \hypersetup{
-    linkcolor=Cyan
+    linkcolor=tocColor
     ,citecolor=Green
     ,filecolor=Mulberry
     ,urlcolor=NavyBlue
@@ -53,28 +63,32 @@
     ,runbordercolor=Mulberry
 }
 
-% Configuración de títulos de secciones
-\titleformat{\section}[hang]{\ttfamily\itshape\Large\bfseries\raggedright}{\thesection}{2pc}{}
+
+\newcommand\ruleafter[1]{#1\ \hrulefill}
+\titleformat{\section}[hang]{\ttfamily\itshape\Large\bfseries\raggedright}{\thesection}{2pc}{\ruleafter}
+
+% \newcommand\ruleafter[1]{\parbox{\linewidth}{\centering #1\ \rule[0.5ex]{5em}{0.4pt}}}
+% \titleformat{\section}[hang]{\ttfamily\itshape\Large\bfseries\raggedright}{\thesection}{2pc}{\ruleafter}
 
 \titlespacing*{\section}{0pt}{0pt}{8pt}
 
 % Configuración de párrafos
-\setlength{\parindent}{15pt} % Sangría
+% \setlength{\parindent}{15pt} % Sangría
+\setlength{\parindent}{2.5em}
 \setlength{\parskip}{1em} % Espaciado entre párrafos
 
 % Encabezados y pies de página
-\fancyhf{}
-\fancyhead[L]{\ttfamily\itshape GCD - \gameTitle}
-
-\fancyhead[R]{\ttfamily\itshape Jesús Jiménez Montero}
-
-\fancyfoot[L]{\ttfamily\itshape\parbox{12cm}{\leftmark}}
-\fancyfoot[C]{\hyperlink{toc}{\ttfamily Volver a Indice}}
-\fancyfoot[R]{\ttfamily\itshape Página \thepage \xspace de \pageref*{LastPage}} % Monospaced italic font for page numbers
-
-\setlength{\headheight}{14.5pt} % Adjust this value if needed
-
 \pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{textColor}\ttfamily\itshape GDD - \gameTitle}
+\fancyhead[R]{\color{textColor}\ttfamily\itshape Jesús Jiménez Montero}
+
+\fancyfoot[L]{\color{textColor}\ttfamily\itshape\raggedright\parbox[t]{0.4\textwidth}{\leftmark}}
+\fancyfoot[C]{\color{textColor}\hfill\makebox[0pt][c]{\hyperlink{toc}{\itshape Volver al Índice}}\hfill}
+\fancyfoot[R]{\color{textColor}\ttfamily\itshape\hfill Página \thepage \xspace de \pageref*{LastPage}}
+
+
+\setlength{\headheight}{14.5pt}
 
 % \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -87,64 +101,80 @@
 \newcommand{\hunter}{\texttt{\textit{Hunter}}\xspace}
 \newcommand{\TWD}{\texttt{\textbf{TWD}}\xspace}
 
+\newcommand{\fodder}{\textit{Fodder}\xspace}
+\newcommand{\ranger}{\textit{Rangers}\xspace}
+\newcommand{\specials}{\textit{Specials}\xspace}
+\newcommand{\shield}{\textit{Shielders}\xspace}
+\newcommand{\darkneer}{\textit{Darkneers}\xspace}
+
 % For subsections
-\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection}{1em}{}\titlespacing*{\subsection}{2em}{*1}{*1}
+\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection}{1em}{}\titlespacing*{\subsection}{1em}{*1}{*1}
 
 % For subsubsections
-\titleformat{\subsubsection}[hang]{\normalsize\bfseries}{\thesubsubsection}{1em}{}\titlespacing*{\subsubsection}{4em}{*1}{*1}
+\titleformat{\subsubsection}[hang]{\normalsize\bfseries}{\thesubsubsection}{1em}{}\titlespacing*{\subsubsection}{2.5em}{*1}{*1}
 
+\definecolor{pageColor}{RGB}{250,248,245}
+\definecolor{textColor}{RGB}{61, 61, 61}
+\definecolor{tocColor}{RGB}{9, 138, 177}
 % Configuración del documento
-\begin{document}
 
+\setlength{\marginparwidth}{2cm}
+
+\renewcommand*{\multicolumntoc}{2}
+\renewcommand*{\multicolumnlof}{2}
+\renewcommand*{\multicolumnlot}{2}
+
+% \setlength{\columnseprule}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagecolor{pageColor}
+\color{textColor}
 % Portada
 \begin{titlepage}
+    \vspace*{\fill}
+
     \centering
-    \vspace*{5cm}
+    \parbox{0.8\textwidth}{    % Logo de la universidad
+        \includegraphics[width=0.7\textwidth]{Imagenes/marca-uji-color-fons-transparent.png}\par\vspace{1cm}
 
-    % Logo de la universidad
-    \includegraphics[width=0.5\textwidth]{Imagenes/marca-uji-color.jpg}\par\vspace{1cm}
+        {\Huge \bfseries GDD \\ \textit{Game Design Document} \par}
+        {\Large \bfseries \gameTitle \par}
 
-    {\Huge \bfseries GCD \\ \textit{Game Concept Document} \par}
-    {\large \bfseries \gameTitle \par}
+        % Información adicional
+        \textsc{\large }
+        \vspace{0.5cm} \\
+        \textsc{\Large VJ1222 - \textit{Diseño Conceptual de Videojuegos}}
+        \vspace{0.5cm} \\
+        \textsc{\large Año: 2024 - 2025}
+        \vfill
 
-    % Información adicional
-    \textsc{\large }
-    \vspace{0.5cm} \\
-    \textsc{\Large VJ1222 - Video Game Conceptual Design}
-    \vspace{0.5cm} \\
-    \textsc{\large Year: 2024 - 2025}
-    \vfill
-
-    % Nombres de los autores
-    \textbf{Made by:}         \\
-    \href{https://www.richardotomislav.com/}{Jesús Jiménez Montero }      \\
-
-    \vspace{1cm}
-
-    \vfill
+        % Nombres de los autores
+        \textbf{Realizado por:}         \\
+        \href{https://www.richardotomislav.com/}{Jesús Jiménez Montero}      \\
+    }
+    \vspace*{\fill}
 \end{titlepage}
 
 % Abstract
 \begin{abstract}
     % TODO: Alargar el abstract un poco más
-    This document contains both the One Sheet and the GCD for the conceptualizaction of \textit{Thy Ways Dimness}, an FPS, pseudo-horror roguelike.
+    This document contains both the One Sheet and the GDD for the conceptualizaction of \textit{Thy Ways Dimness}, an FPS, pseudo-horror roguelike.
 \end{abstract}
-{\small \textbf{Keywords} \textit{Thy Ways Dimness,} FPS, Roguelike, Horror, Pseudo-Horror, Game Design, GCD, One Sheet}
+{\small \textbf{Keywords} \textit{Thy Ways Dimness,} FPS, Roguelike, Horror, Pseudo-Horror, Game Design, GDD, One Sheet}
 \newpage
 
 % Índice de contenidos
 %change the table of contents title
 % \renewcommand{\contentsname}{Indice del documento}
 \hypertarget{toc}{}
-\begin{multicols}{2}
-    \tableofcontents
-\end{multicols}
+
+\tableofcontents
+
 \newpage
 
 % \renewcommand{\listtablename}{Lista de }
-\begin{multicols}{2}
-    \listoftables
-\end{multicols}
+\listoftables
 \newpage
 
 % Índice de figuras
@@ -155,13 +185,20 @@
 % BEGINNING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{\huge{One Sheet}}
 % \section*{\huge{One Sheet}}
-\addcontentsline{toc}{section}{One Sheet}
+\part{One Sheet}
+% \section*{\huge{One Sheet}}
+% \addcontentsline{toc}{section}{One Sheet}
 \input{./chapters/onesheet.tex}
 \newpage
-\section*{\huge{Game Design Document}}
-\addcontentsline{toc}{section}{Game Design Document}
+
+\part{Game Design Document}
+% \section*{\huge{Game Design Document}}
+% \addcontentsline{toc}{section}{Game Design Document}
 \input{./chapters/gcd.tex}
 
+\newpage
+% \nocite{*}
+\todo{QUITAR NOCITE PARA LA BIBLIOGRAFÍA}
+\printbibliography % Imprimir la bibliografía
 \end{document}
