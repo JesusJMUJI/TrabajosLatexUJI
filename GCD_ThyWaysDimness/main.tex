@@ -12,14 +12,16 @@
 \usepackage{afterpage}
 \usepackage{setspace} % Espaciado entre lineas
 \usepackage[dvipsnames]{xcolor}
-\usepackage[nopatch=footnote]{microtype}
 \usepackage{comment}
 \usepackage{xspace}
 \usepackage{fontspec}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,fit} % Add this line to include geometric shapes
-
+% \usepackage[none]{hyphenat}
+\hyphenpenalty=5000
+\tolerance=1000
+\usepackage[nopatch=footnote]{microtype}
 \usepackage{multicol}
 \usepackage[toc,lof,lot]{multitoc}
 
@@ -29,6 +31,7 @@
 \usepackage{tablefootnote}
 \usepackage{xhfill}
 \usepackage{todonotes}
+
 \usepackage{csquotes}
 
 % \usepackage{plex-otf}
@@ -156,13 +159,20 @@
     \vspace*{\fill}
 \end{titlepage}
 
+\selectlanguage{english}
 % Abstract
 \begin{abstract}
     % TODO: Alargar el abstract un poco más
-    This document contains both the One Sheet and the GDD for the conceptualizaction of \textit{Thy Ways Dimness}, an FPS, pseudo-horror roguelike.
+    % This document contains both the One Sheet and the GDD for the conceptualizaction of \textit{Thy Ways Dimness}, an FPS, pseudo-horror roguelike.
+    This document presents both the One Sheet and the Game Design Document (GDD) for the conceptualization of "Thy Ways Dimness," a first-person shooter (FPS) with pseudo-horror and roguelike elements. The game is set in a dark, medieval-inspired world where humanity faces extinction due to an invasion of indestructible dark creatures.\\
+
+    Players take on the role of Hunters, elite warriors equipped with special gunpowder weapons that combine light and fire to combat these creatures. The game features two main modes: Story Mode, where players descend into the depths of the Hole to uncover its mysteries and defeat bosses, and Endless Mode, focused on wave-based survival and leaderboard competition.\\
+
+    Key mechanics include the strategic use of light to reveal and damage enemies, resource management, and a variety of weapons and enemy types. The document details the game's design, including player types, game rules, mechanics, balance, gameplay, level design, sound design, gamification, monetization, and multiplayer aspects.
 \end{abstract}
-{\small \textbf{Keywords} \textit{Thy Ways Dimness,} FPS, Roguelike, Horror, Pseudo-Horror, Game Design, GDD, One Sheet}
+{\small \textbf{Keywords}: \textit{Thy Ways Dimness,} FPS, Roguelike, Horror, Pseudo-Horror, Game Design, GDD, One Sheet}
 \newpage
+\selectlanguage{spanish}
 
 % Índice de contenidos
 %change the table of contents title
@@ -178,7 +188,7 @@
 \newpage
 
 % Índice de figuras
-\listoffigures
+% \listoffigures
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,6 +209,6 @@
 
 \newpage
 % \nocite{*}
-\todo{QUITAR NOCITE PARA LA BIBLIOGRAFÍA}
+% \todo{QUITAR NOCITE PARA LA BIBLIOGRAFÍA}
 \printbibliography % Imprimir la bibliografía
 \end{document}
