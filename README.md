@@ -1,4 +1,9 @@
 ### LaTeX tutorial to have it on VSCode
+---
+Made my own website in spanish for my classmates:
+https://jesusjmuji.github.io/recursos-uji/
+
+---
 
 https://mathjiajia.github.io/vscode-and-latex/
 
